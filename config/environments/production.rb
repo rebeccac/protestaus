@@ -77,7 +77,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Handle Devise mailing functions
-  config.action_mailer.default_url_options = { host: 'protestaus.heroku.com' }
+  config.action_mailer.default_url_options = { host: 'protestaus.herokuapp.com', protocol: 'https' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
 
