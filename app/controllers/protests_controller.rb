@@ -20,6 +20,7 @@ class ProtestsController < ApplicationController
   def create
     # create protest instance var with values submitted
     @protest = current_user.protests.new(protest_params)
+    @protest.visible = true
 
 	# attempt to save user
   	if @protest.save
