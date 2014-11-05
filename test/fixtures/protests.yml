@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  date: 2014-11-05
+  time: 2014-11-05 19:31:18
+  state: MyString
+  starting_location: MyString
+  march_route: MyString
+  more_info: MyString
+  organisation: MyString
+  website: MyString
+  twitter: MyString
+  facebook: MyString
+  email: MyString
+  user_id: 1
+
+two:
+  title: MyString
+  date: 2014-11-05
+  time: 2014-11-05 19:31:18
+  state: MyString
+  starting_location: MyString
+  march_route: MyString
+  more_info: MyString
+  organisation: MyString
+  website: MyString
+  twitter: MyString
+  facebook: MyString
+  email: MyString
+  user_id: 1

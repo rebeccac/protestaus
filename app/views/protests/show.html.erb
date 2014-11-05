@@ -1,0 +1,88 @@
+<%= provide(:title, "Join the protest in #{@protest.state} - #{@protest.title}, #{Date.parse(@protest.date.to_s).strftime("%e %B %Y")}  | Protest Australia") %>
+<h1><%= @protest.title %></h1>
+
+<div class="row">
+	<% if current_user.try(:admin?) %>
+		<div class="large-12 columns">
+			<div class="box admin-box">
+				<h3 class="subheading">Admin:</h3>
+				<p>User ID: <%= @user.id %></p>
+				<p>Username: <%= @user.email %></p>
+			</div>
+		</div>
+	<% end %>
+</div><!-- row -->
+
+<%= render 'common/share' %>
+
+<div class="show-protest-container">
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="box <%= @protest.state.downcase %>">
+				<h3 class="protest-heading"><%= Time.parse(@protest.time.to_s).strftime("%H:%M") %>, <%= Date.parse(@protest.date.to_s).strftime("%A %e %B %Y") %></h3>
+			</div>
+		</div>
+	</div> <!-- row -->
+	<div class="row">
+		<div class="large-6 columns">
+			<div class="box">
+				<p><span class="highlight red-text">Starting location</span> <%= @protest.starting_location %></p>
+			</div>
+		</div>
+
+		<div class="large-6 columns">
+			<div class="box">
+				<p><span class="highlight red-text">Organisers</span> <% unless @protest.organisation.empty? %>
+					<%= @protest.organisation %><br>
+				<% else %>
+					N/A<br>
+				<% end %>
+			</p>
+			<p><span class="highlight red-text">E-mail</span> <% unless @protest.email.empty? %>
+				<%= mail_to @protest.email, @protest.email, subject: @protest.title %><br>
+				<% else %>
+					N/A<br>
+				<% end %>
+			</p>
+			<p><span class="highlight red-text">Website</span> <% unless @protest.website.empty? %>
+				<%= link_to @protest.website, @protest.website, target: "_blank" %><br>
+				<% else %>
+					N/A<br>
+				<% end %>
+			</p>
+			<p><span class="highlight red-text">Twitter</span><% unless @protest.twitter == "@" %>
+					<%= link_to @protest.twitter, "http://www.twitter.com/#{@protest.twitter[1..-1]}", target: "_blank" %><br>
+				<% else %>
+				N/A
+				<% end %>
+			</p>
+			<p><span class="highlight red-text">Facebook</span> <% unless @protest.facebook.empty? %>
+				<%= link_to @protest.facebook, @protest.facebook, target: "_blank" %><br>
+				<% else %>
+					N/A<br>
+				<% end %>
+			</p>
+			</div>
+		</div>
+		<div class="large-6 columns">
+			<div class="box">
+				<p><span class="highlight red-text">More info</span> <% unless @protest.more_info.empty? %>
+					<%= @protest.more_info %><br>
+					<% else %>
+						N/A<br>
+					<% end %>
+				</p>
+			</div>
+		</div>
+		<div class="large-6 columns">
+			<div class="box">
+				<p><span class="highlight red-text">March route</span> <% unless @protest.march_route.empty? %>
+					<%= @protest.march_route %><br>
+					<% else %>
+						N/A<br>
+					<% end %>
+				</p>
+			</div>
+		</div>
+	</div><!-- row -->
+</div>
