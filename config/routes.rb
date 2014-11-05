@@ -1,27 +1,27 @@
 Rails.application.routes.draw do
-  get 'protests/index'
 
-   devise_for :users
-   root to: 'pages#index'
+  devise_for :users
+  root to: 'pages#index'
 
-   get "pages/related_sites"
+  get "pages/related_sites"
 
-   resources :protests
-   resources :users
+  resources :protests
+  resources :users
 
-   match '/protests', to: 'protests#index', via: [:get]
-   match '/protests/state', to: 'protests#state', via: [:get]
-   match '/protests/hidden', to: 'protests#hidden', via: [:get]
-   match '/new', to: 'protests#new', via: [:get]
-   match '/my_protests', to: 'protests#my_protests', via: [:get]
-   match '/search', to: 'protests#search', via: [:get]
+  match '/protests', to: 'protests#index', via: [:get]
+  match '/protests/state', to: 'protests#state', via: [:get]
+  match '/protests/hidden', to: 'protests#hidden', via: [:get]
+  match '/new', to: 'protests#new', via: [:get]
+  match '/my_protests', to: 'protests#my_protests', via: [:get]
+  match '/search', to: 'protests#search', via: [:get]
 
-   match '/related_sites', to: 'pages#related_sites', via: [:get]
-   match '/about_us', to: 'pages#about_us', via: [:get]
-   match '/contact_us', to: 'pages#contact_us', via: [:get]
-   match '/admin', to: 'pages#admin', via: [:get]
 
-   match '/users', to: 'users#index', via: [:get]
+  match '/related_sites', to: 'pages#related_sites', via: [:get]
+  match '/about_us', to: 'pages#about_us', via: [:get]
+  match '/contact_us', to: 'pages#contact_us', via: [:get]
+  match '/admin', to: 'pages#admin', via: [:get]
+
+  match '/users', to: 'users#index', via: [:get]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
