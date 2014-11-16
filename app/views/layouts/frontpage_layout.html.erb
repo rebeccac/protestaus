@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower|Questrial|Alegreya+Sans+SC|Michroma|Quicksand|Josefin+Sans|Muli|Maven+Pro|Karla|PT+Sans+Caption|Julius+Sans+One|Carrois+Gothic+SC|Numans' rel='stylesheet' type='text/css'>
+    <title><%= content_for?(:title) ? yield(:title) : "Protest Australia" %></title>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class="frontpage-body">
+     <div class="container">
+         <header class="header">
+            <h2 class="top-header-full"><%= link_to "Protest Australia", root_path %></h2>
+            <h2 class="top-header-initials"><%= link_to "Protest", root_path %><br><%= link_to "Australia", root_path %>
+            </h2>
+            <div class="top-menu">
+               <%= render 'common/search_field' %>
+               <div class="button-small search-button">
+                  <%= link_to protests_path do %>
+                     <i class="fa fa-search"></i>
+                  <% end %>
+               </div>
+               <div class="button-small"><i class="fa fa-twitter"></i></div>
+               <div class="button-small"><i class="fa fa-facebook"></i></div>
+               <% if signed_in? %>
+                     <% if current_user.try(:admin?) %>
+                        <div class="admin-star"><i class="fa fa-star med-icon yellow-text"></i></div>
+                     <% end %>
+                     <div class="signed-in">Signed in</div>
+               <% else %>
+                     <%= link_to "Sign In", new_user_session_path, :method => :get, class: "button" %>
+               <% end %>
+            </div><!-- top-menu -->
+               <div class="menu-icon">
+               <div class="button-small menu-top-right" id="menu-icon"><i class="fa fa-bars"></i>
+
+                  <ul class="dropdown-menu" id="dropdown-menu">
+                     <li class="dropdown-menu-item-top">
+                     <% if signed_in? %>
+                           <% if current_user.try(:admin?) %>
+                              <div class="admin-star"><i class="fa fa-star med-icon yellow-text"></i></div>
+                           <% end %>
+                           <div class="signed-in">Signed in</div>
+                     <% else %>
+                            <%= link_to "Register", new_user_registration_path, :method => :get, class: "button" %> <%= link_to "Sign In", new_user_session_path, :method => :get, class: "button" %>
+                     <% end %>
+
+                     </li>
+                     <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><img src="assets/dropdownmenuprotest.png" width="27px" height="25px" class="dropdown-menu-icon" alt = "Protest icon"></div><%= link_to "Protests", protests_path %></li>
+                     <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-plus"></i></div><%= link_to "Add a Protest", new_path %></li>
+                     <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-user"></i></div><%= link_to "My Protests", my_protests_path %></li>
+                     <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-link"></i></div><%= link_to "Related Sites", related_sites_path %></li>
+                     <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-info"></i></div><%= link_to "About Us", about_us_path %></li>
+                     <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-envelope"></i></div><%= link_to "Contact Us", contact_us_path %></li>
+                     <% if current_user.try(:admin?) %>
+                        <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-gear"></i></div><%= link_to "Admin Panel", admin_path %></li>
+                     <% end %>
+                     <% if signed_in? %>
+                        <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-sign-out"></i></div><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+                     <% end %>
+                  </ul><!-- dropdown-menu -->
+               </div><!-- id:menu-icon -->
+         </header>
+         <div class="frontpage-content">
+            <% flash.each do |key, value| %>
+               <div id="message"><p><%= value %></p></div>
+            <% end %>
+
+             <%= yield %>
+         </div>
+       </div><!-- container -->
+       <div class="clear"></div>
+       <%= render 'common/footer' %>
+
+      <%= javascript_include_tag "application" %>
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-543e57250f8eea8c" async></script>
+
+  </body>
+</html>
