@@ -39,7 +39,29 @@ $menu-yellow: #f3bf28;
 $red: #cc0000;
 $beige: #e0dcd5;
 $white: #f2f2f2;
+$emerald: #007a7a;
 
+h4 {
+   display: inline-block;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.3em;
+   color: $white;
+   padding-left: 10px;
+   font-weight: 200;
+   letter-spacing: 1px;
+   &.left-align {
+      text-align: left;
+      font-weight: 400;
+      padding-left: 150px;
+   }
+}
+
+.left-align-box {
+   width: auto;
+   text-align: left;
+   position: relative;
+   left: 0;
+}
 .frontpage-body {
    background-color: $beige !important;
 }
@@ -57,7 +79,7 @@ $white: #f2f2f2;
       .recent-protests-outside-box {
          float: left;
          width: 70%;
-         height: 100%;
+         height: 85%;
          content: "";
          display: table;
          position: relative;
@@ -80,6 +102,23 @@ $white: #f2f2f2;
                border: 0;
                display: inline-block;
             }
+         }
+      }
+      .top-box-lower-row {
+         width: 50%;
+         height: 15%;
+         display: inline-block;
+         content: " ";
+         vertical-align: top;
+         a.register-button {
+            background-color: $emerald;
+            padding: 10px 80px;
+            border: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3em;
+            line-height: 50px;
+            color: $white;
+            text-align: center;
          }
       }
    }
@@ -118,5 +157,4 @@ footer.frontpage-footer {
    height: 50px;
    width: 100%;
    background-color: $beige;
-   border-top: 1px solid #ccc;
 }
