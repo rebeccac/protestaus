@@ -101,21 +101,28 @@ ul.disc-list { // display normal (disc) list style
 
 
 /* ********** vertical centre multi-line text ********** */
-.vertical-center-35-100 {
-   width: 35%;
+.vertical-center-30-100 {
+   width: 30%;
    height: 100%;
+   position: absolute;
+   right: 0;
 }
+.vertical-center-65-100 {
+   width: 70%;
+   height: 100%;
+   position: absolute;
+   left: 0;
+   }
 .vertical-center-outside-box {
  position: relative;
- // width:35%;
- // height: 100%;
+
  float: right;
    .vertical-center-absolute-center {
       margin: auto;
       position: absolute;
       top: 0; left: 0; bottom: 0; right: 0;
    }
-   .vertical-center-inside-box {
+   .vertical-center-raise-your-voice {
      width: 300px;
      font-family: 'Indie Flower', cursive;
      font-size: 7em;
