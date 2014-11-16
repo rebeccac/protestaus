@@ -5,6 +5,15 @@
    <div class="recent-protests-outside-box">
 
       <div class="recent-protests-inside-box">
+         <% if @recent_protests.any? %>
+		<ul>
+			<%= render partial: "recent", collection: @recent_protests.reverse %>
+		</ul>
+		<% else %>
+			<p>There are no protests available</p>
+		<% end %>
+
+
          <div class="frontpage-protest">Protest One</div>
          <div class="frontpage-protest">Protest Two</div>
          <div class="frontpage-protest">Protest Three</div>
