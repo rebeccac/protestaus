@@ -7,7 +7,7 @@ class Protest < ActiveRecord::Base
 	validates :starting_location, presence: true, length: { in: 5..150 }
    validates :march_route, length: { in: 10..500 }, :allow_blank => true
 	validates :more_info, length: { in: 10..1000 }, :allow_blank => true
-	validates :website, :url   => true, :allow_blank => true
+   validates :website, :url => {:allow_blank => true}
 	validates :visible, inclusion: { in: [true, false] } # visible field must contain value of either true or false
 
 	def self.visible(params)

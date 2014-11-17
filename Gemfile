@@ -24,7 +24,8 @@ gem 'therubyracer'
 gem 'will_paginate', '~> 3.0.7'
 gem "font-awesome-rails"
 gem 'rails_12factor'
-gem 'url_validator', '~> 0.1.0'
+# gem 'url_validator', '~> 0.1.0'
+gem 'validate_url'
 
 
 # Use jquery as the JavaScript library

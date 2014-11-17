@@ -211,3 +211,36 @@ footer.frontpage-footer {
    width: 100%;
    background-color: $beige;
 }
+
+
+/* ********** Media queries ********** */
+
+@media (min-width: 955px) {
+   .frontpage-content {
+      .top-box {
+         .top-raise-your-voice {
+            display: none;
+         }
+      }
+   }
+}
+
+@media (max-width: 954px) {
+   .frontpage-content {
+      .top-box {
+         .top-raise-your-voice {
+               font-family: 'Indie Flower', cursive;
+               font-size: 7em;
+               color: $white;
+               display: block;
+         }
+      }
+   }
+
+   .vertical-center-30-100 {
+      display: none;
+   }
+   .vertical-center-outside-box {
+      display: none;   
+   }
+}
