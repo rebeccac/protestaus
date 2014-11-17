@@ -8,7 +8,7 @@
 }
 @font-face {
    font-family: 'Mohave';
-   src: font-url((Mohave.otf);
+   src: asset-url(/assets/Mohave.otf);
 }
 @mixin Mohave {
    font-family: 'Mohave';
