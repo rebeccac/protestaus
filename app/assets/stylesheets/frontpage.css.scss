@@ -8,14 +8,14 @@
 }
 @font-face {
    font-family: 'Mohave';
-   src: url(/assets/Mohave.otf);
+   src: url(font(Mohave.otf));
 }
 @mixin Mohave {
    font-family: 'Mohave';
 }
 @font-face {
     font-family: 'FontAwesome';
-    src: url(/assets/fontawesome-webfont.eot);
+    src: url(font(fontawesome-webfont.eot));
     src: url(/assets/fontawesome-webfont.svg);
     src: url(/assets/fontawesome-webfont.ttf);
     src: url(/assets/fontawesome-webfont.woff);
