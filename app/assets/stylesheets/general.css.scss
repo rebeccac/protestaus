@@ -75,6 +75,13 @@ text-align: center;
       a:hover   { color: $yellow; }  /* user hovers     */
       a:active  { color: $yellow; }  /* active links    */
 }
+.white-text {
+   color: $white;
+      &:link    { color: $white; }  /* unvisited links */
+      &:visited { color: $white; }  /* visited links   */
+      a:hover   { color: $white; }  /* user hovers     */
+      a:active  { color: $white; }  /* active links    */
+}
 .highlight {
    font-weight: 200;
    text-decoration: underline;

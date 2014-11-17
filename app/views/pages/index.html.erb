@@ -8,11 +8,12 @@
          <% if @recent_protests.any? %>
                <%= render partial: "pages/recent_protest", collection: @recent_protests %>
    		<% else %>
-   			<p>There are no protests available</p>
+   			<p class="white-text">There are no protests available</p>
    		<% end %>
 
+
          <div class="clear"></div>
-         <div class="left-align-box"><h4 class="left-align">View all protests</h4></div>
+         <div class="left-align-box"><%= link_to "View all protests", protests_path, class:"front-page-major-link left-align" %></div>
       </div>
    </div>
 
