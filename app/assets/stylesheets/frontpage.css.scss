@@ -50,17 +50,14 @@ h4, a.front-page-major-link {
    font-weight: 200;
    letter-spacing: 1px;
 }
-.left-align {
-   text-align: left;
-   font-weight: 400;
-   padding-left: 150px;
-}
 
 .left-align-box {
    width: auto;
    text-align: left;
    position: relative;
    left: 0;
+   font-weight: 400;
+   padding-left: 150px;
 }
 .frontpage-body {
    background-color: $beige !important;
