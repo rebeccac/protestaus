@@ -111,10 +111,48 @@ h4, a.front-page-major-link {
                   color: $white;
                   text-align: left;
                }
-               .text {
+               .title-bar-padding {
                   padding: 0 5px;
+               }
+               .text {
                   @include OpenSans;
                   font-weight: 400;
+               }
+               .info1 {
+                  padding: 5px;
+                  height: 40px;
+                  .state-label {
+                     float: left;
+                     width: 40px;
+                     height: 40px;
+                     background-color: $med_grey;
+                     border-radius: 50%;
+                     @include Helvetica;
+                     font-size: 1em;
+                     font-weight: 400;
+                     color: $dark_grey;
+                     text-align: center;
+                     line-height: 40px;
+                     display: inline-block;
+                  }
+                  .date-label {
+                     display: inline-block;
+                     line-height: 40px;
+                     @include OpenSans;
+                     font-size: 1.5em;
+                     font-weight: 400;
+                     color: $dark_grey;
+                     text-align: left;
+                     width: auto;
+                     height: 40px;
+                  }
+               }
+               .info2,
+               .info3 {
+                  padding: 10px;
+                  height: auto;
+                  color: $dark_grey;
+                  text-align: left;
                }
             }
          }
