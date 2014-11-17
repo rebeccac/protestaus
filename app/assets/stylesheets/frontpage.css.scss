@@ -8,17 +8,17 @@
 }
 @font-face {
    font-family: 'Mohave';
-   src: url(font(Mohave.otf));
+   src: asset-url((Mohave.otf);
 }
 @mixin Mohave {
    font-family: 'Mohave';
 }
 @font-face {
     font-family: 'FontAwesome';
-    src: url(font(fontawesome-webfont.eot));
-    src: url(/assets/fontawesome-webfont.svg);
-    src: url(/assets/fontawesome-webfont.ttf);
-    src: url(/assets/fontawesome-webfont.woff);
+    src: asset-url(fontawesome-webfont.eot);
+    src: asset-url(/assets/fontawesome-webfont.svg);
+    src: asset-url(/assets/fontawesome-webfont.ttf);
+    src: asset-url(/assets/fontawesome-webfont.woff);
 }
 
 $orange: #f17a36;
