@@ -49,7 +49,7 @@
                      <% end %>
 
                      </li>
-                     <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><img src="assets/images/dropdownmenuprotest.png" width="27px" height="25px" class="dropdown-menu-icon" alt = "Protest icon"></div><%= link_to "Protests", protests_path %></li>
+                     <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><%= image_tag("dropdownmenuprotest.png", size: "27x25", alt: "Protest icon", class: "dropdown-menu-icon") %><!--<img src="assets/images/dropdownmenuprotest.png" width="27px" height="25px" class="dropdown-menu-icon" alt = "Protest icon"> --></div><%= link_to "Protests", protests_path %></li>
                      <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-plus"></i></div><%= link_to "Add a Protest", new_path %></li>
                      <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-user"></i></div><%= link_to "My Protests", my_protests_path %></li>
                      <li class="dropdown-menu-item"><div class="dropdown-left-box-icon"><i class="fa fa-link"></i></div><%= link_to "Related Sites", related_sites_path %></li>
