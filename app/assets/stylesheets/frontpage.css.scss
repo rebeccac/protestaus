@@ -8,17 +8,17 @@
 }
 @font-face {
    font-family: 'Mohave';
-   src: url('Mohave.otf') format('truetype');
+   src: font-url('Mohave.otf') format('truetype');
 }
 @mixin Mohave {
    font-family: 'Mohave';
 }
 @font-face {
     font-family: 'FontAwesome';
-    src: url('fontawesome-webfont.eot') format ('embedded-opentype'),
-         url('fontawesome-webfont.svg') format('svg'),
-         url('fontawesome-webfont.ttf') format('truetype'),
-         url('fontawesome-webfont.woff') format('woff');
+    src: font-url('fontawesome-webfont.eot') format ('embedded-opentype'),
+         font-url('fontawesome-webfont.svg') format('svg'),
+         font-url('fontawesome-webfont.ttf') format('truetype'),
+         font-url('fontawesome-webfont.woff') format('woff');
    //  src: asset-url(/assets/fontawesome-webfont.svg);
    //  src: asset-url(/assets/fontawesome-webfont.ttf);
    //  src: asset-url(/assets/fontawesome-webfont.woff);
