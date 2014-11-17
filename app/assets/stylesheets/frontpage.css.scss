@@ -15,10 +15,13 @@
 }
 @font-face {
     font-family: 'FontAwesome';
-    src: asset-url(fontawesome-webfont.eot);
-    src: asset-url(/assets/fontawesome-webfont.svg);
-    src: asset-url(/assets/fontawesome-webfont.ttf);
-    src: asset-url(/assets/fontawesome-webfont.woff);
+    src: url('fontawesome-webfont.eot') format ('embedded-opentype'),
+         url('fontawesome-webfont.svg') format('svg'),
+         url('fontawesome-webfont.ttf') format('truetype'),
+         url('fontawesome-webfont.woff') format('woff');
+   //  src: asset-url(/assets/fontawesome-webfont.svg);
+   //  src: asset-url(/assets/fontawesome-webfont.ttf);
+   //  src: asset-url(/assets/fontawesome-webfont.woff);
 }
 
 $orange: #f17a36;
