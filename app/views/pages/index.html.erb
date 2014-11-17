@@ -6,17 +6,11 @@
 
       <div class="recent-protests-inside-box">
          <% if @recent_protests.any? %>
-		<ul>
-			<%= render partial: "recent", collection: @recent_protests.reverse %>
-		</ul>
-		<% else %>
-			<p>There are no protests available</p>
-		<% end %>
+               <%= render partial: "pages/recent_protest", collection: @recent_protests %>
+   		<% else %>
+   			<p>There are no protests available</p>
+   		<% end %>
 
-
-         <div class="frontpage-protest">Protest One</div>
-         <div class="frontpage-protest">Protest Two</div>
-         <div class="frontpage-protest">Protest Three</div>
          <div class="clear"></div>
          <div class="left-align-box"><h4 class="left-align">View all protests</h4></div>
       </div>
