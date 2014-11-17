@@ -229,18 +229,33 @@ footer.frontpage-footer {
    .frontpage-content {
       .top-box {
          .top-raise-your-voice {
+               padding-top: 10px;
+               width: 100%;
+               height: 70px;
+               text-align: center;
                font-family: 'Indie Flower', cursive;
-               font-size: 7em;
+               font-size: 5em;
                color: $white;
                display: block;
+               line-height: 70px;
+         }
+         .recent-protests-outside-box {
+            width: 100%;
+            height: 270px;
+            .recent-protests-inside-box {
+               height: 220px;
+               .frontpage-protest {
+                  height: 210px;
+               }
+            }
          }
       }
-   }
 
+   }
    .vertical-center-30-100 {
       display: none;
    }
    .vertical-center-outside-box {
-      display: none;   
+      display: none;
    }
 }
