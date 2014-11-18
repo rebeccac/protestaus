@@ -404,6 +404,17 @@ footer.footer {
    bottom: 0;
    height: 50px;
    width: 100%;
+   .smicons {
+      width: auto;
+      height: auto;
+      padding: 0 30px;
+      display: inline-block;
+      i {
+         color: $white;
+         font-size: 2em;
+         padding: 0 15px;
+      }
+   }
 }
 
 

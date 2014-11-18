@@ -154,3 +154,88 @@ ul#protest_list {
       }
    }
 }
+
+/* ********** Media queries ********** */
+
+@media (max-width: 666px) {
+   .box {
+     border-bottom: 1px solid #eee;
+   }
+   .protest {
+      display: inline-block;
+      width: 98%;
+      min-height: 200px;
+      .columns {
+         padding: 0;
+         margin: 0;
+      }
+
+      .info-1 {
+         height: 90px;
+         vertical-align: bottom;
+         h3.protest-heading {
+            font-size: 1.2em;
+         }
+      }
+      .info-2 {
+         margin-top: -90px;
+         height: 40px;
+         line-height: 40px;
+         font-size: 0.9em;
+         padding: 0 10px;
+      }
+      .info-3 {
+         height: 110px;
+         font-size: 0.9em;
+         padding: 5px 0;
+      }
+      .top-layer {
+         top: -90px;
+         height: 90px;
+         .state {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+         }
+      }
+   }
+}
+
+@media (min-width: 667px) and (max-width: 767px) {
+   .box {
+   //   border-bottom: 1px solid #eee;
+   }
+   .protest {
+      display: inline-block;
+      width: 45%;
+      min-height: 350px;
+      .columns {
+         padding: 0;
+         margin: 0;
+      }
+      .info-1 {
+         height: 90px;
+      }
+      .info-2 {
+         height: 40px;
+         line-height: 40px;
+         font-size: 1em;
+         padding: 0;
+         margin-top: -90px;
+      }
+      .info-3 {
+         height: 140px;
+         font-size: 1.1em;
+         padding: 5px 0;
+      }
+      .top-layer {
+         top: -90px;
+         height: 90px;
+         .state {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+         }
+      }
+   }
+}

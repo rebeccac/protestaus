@@ -207,13 +207,28 @@ footer.frontpage-footer {
    text-align: center;
    @include Helvetica;
    font-size: 0.8em;
-   color: $dark_grey;
+   color: $med_grey;
    position: absolute;
    left: 0;
    bottom: 0;
    height: 50px;
    width: 100%;
    background-color: $beige;
+   display: inline-block;
+   .smicons {
+      position: absolute;
+      height: 45px;
+      left: 30px;
+      padding: 0 30px;
+      display: inline-block;
+      line-height: 50px;
+      i {
+         color: $med_grey;
+         font-size: 2em;
+         padding: 0 15px;
+         line-height: 50px;
+      }
+   }
 }
 
 
