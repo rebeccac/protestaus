@@ -138,17 +138,17 @@ ul#protest_list {
       vertical-align: top;
       .state {
          position: relative;
-         width: 60px;
-         height: 60px;
+         width: 50px;
+         height: 50px;
          border-radius: 50%;
          text-align: center;
-         line-height: 60px;
+         line-height: 50px;
          background-color: rgba(251,251,251,0.3);
          color: $dark_grey;
          margin-left: 10px;
          a:link, a:visited, a:hover, a:active {
             font-family: 'Muli', sans-serif;
-            font-size: 1.7em;
+            font-size: 1.4em;
             color: $dark_grey;
          }
       }
