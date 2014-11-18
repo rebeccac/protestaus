@@ -1,3 +1,155 @@
-// Place all the styles related to the Protests controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin Helvetica {
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: 200;
+}
+@mixin OpenSans {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+}
+
+$orange: #f17a36;
+// $yellow: #f3cd36;
+$yellow: #ffcc55;
+$green: #16b183;
+$pale_blue: #14b9d5;
+$dark_blue: #323a45;
+$cream: #e5d6a7;
+
+$purple: #674fb1;
+$red: #d54343;
+$maroon: #590902;
+
+$white: #fdfdfd;
+$dark_grey: #444444;
+$med_grey: #a2a2a2;
+$pale_grey: #cccccc;
+$charcoal: #282828;
+
+.act {
+   background-color: #f2594b;
+}
+.nsw {
+   background-color: #f27d52;
+}
+.nt {
+   // background-color: #ccba60;
+   background-color: #cc9900;
+}
+.qld {
+   background-color: #809142;
+}
+.sa {
+   background-color: #4b7ba6;
+}
+.tas {
+   background-color: $pale_blue;
+}
+.vic {
+   background-color: #9933cc;
+}
+.wa {
+   background-color: $purple;
+}
+
+
+ul#protest_list {
+   width: 90%;
+   margin: 0 auto;
+   li {
+      margin: 20px 3px;
+      padding: 0;
+   }
+}
+
+.protest {
+   border: 1px solid $pale_grey;
+   display: inline-block;
+   color: $white;
+   height: auto;
+   background-color: #fff;
+
+   .details_button {
+      width: 110px;
+      padding: 5px 10px;
+      background-color: $dark_grey;
+      margin: 10px auto;
+      display: block;
+      text-align: center;
+      a {
+         font-family: 'Questrial', sans-serif;
+         color: $white;
+         font-size: 1em;
+         text-align: center;
+      }
+   }
+   .columns {
+      padding: 0;
+      margin: 0;
+   }
+   .circle {
+      position: absolute;
+      top: 0;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      line-height: 45px;
+      text-align: center;
+      margin: 0 7px;
+      padding: 0;
+      display: inline-block;
+      a:link, a:visited, a:hover, a:active {
+         color: $white;
+      }
+   }
+   .info-1, .info-2, .info-3 {
+      width: 100%;
+      display: block;
+      @include Helvetica;
+      color: $white;
+   }
+   .info-2, .info-3 {
+      font-family: 'Questrial', sans-serif;
+      font-size: 1.1em;
+      color: $charcoal;
+   }
+   .info-1 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 10px;
+      height: 150px;
+      vertical-align: top;
+      line-height: 150px;
+   }
+   .info-2 {
+      margin-bottom: 10px;
+      font-weight: 600;
+      border-bottom: 1px solid #eee;
+   }
+   .info-3 {
+   }
+   .top-layer {
+      position: relative;
+      top: -150px;
+      z-index: 45;
+      margin: 0;
+      padding: 0;
+      height: 150px;
+      vertical-align: top;
+      .state {
+         position: relative;
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         text-align: center;
+         line-height: 60px;
+         background-color: rgba(251,251,251,0.3);
+         color: $dark_grey;
+         margin-left: 10px;
+         a:link, a:visited, a:hover, a:active {
+            font-family: 'Muli', sans-serif;
+            font-size: 1.7em;
+            color: $dark_grey;
+         }
+      }
+   }
+}
