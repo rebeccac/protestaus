@@ -1,0 +1,60 @@
+@mixin Helvetica {
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: 200;
+}
+@mixin OpenSans {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+}
+
+
+$orange: #f17a36;
+$yellow: #ffcc00;
+$green: #16b183;
+$pale_blue: #14b9d5;
+$dark_blue: #323a45;
+$cream: #e5d6a7;
+
+$purple: #674fb1;
+$red: #d54343;
+$maroon: #590902;
+
+$white: #fdfdfd;
+$charcoal: #282828;
+$dark_grey: #444444;
+$med_grey: #a2a2a2;
+$pale_grey: #cccccc;
+$emerald: #007a7a;
+
+
+.admin-control-panel {
+   width: 100%;
+   margin: 50px 0;
+   display: block;
+   a:link, a:visited, a:hover, a:active {
+      color: $dark_grey;
+      text-decoration: none;
+      font-size: 1.5em;
+      @include Helvetica;
+      font-weight: 200;
+   }
+   i {
+      font-size: 1.5em;
+      color: $emerald;
+      padding: 0 20px 0 0;
+   }
+   ul {
+      list-style: none;
+      li.admin {
+         padding: 20px;
+         width: 80%;
+         margin: 0 auto;
+         &:nth-child(even) {
+            background-color: #eee;
+         }
+         &:nth-child(odd) {
+            background-color: #ccc;
+         }
+      }
+   }
+}

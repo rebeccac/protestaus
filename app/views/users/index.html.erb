@@ -1,0 +1,32 @@
+<% provide(:title, 'All Users | Protest Australia') %>
+
+<h1>All Users</h1>
+<h3 class="subheading indent-20">Registered users: <%= @users.count %></h3>
+<% if @users.any? %>
+   <ul>
+      <li class="user">
+         <div class="row">
+            <div class="large-1 medium-1 small-1 columns">
+               ID
+            </div>
+            <div class="large-5 medium-5 small-5 columns">
+               Email
+            </div>
+            <div class="large-3 medium-3 small-3 columns">
+               Current sign-in IP
+            </div>
+            <div class="large-1 medium-1 small-1 columns">
+               Admin?
+            </div>
+            <div class="large-1 medium-1 small-1 columns">
+             </div>
+
+         </div>
+      </li>
+      <%= render @users %> <!-- render _user.html.erb -->
+   </ul>
+   <%= will_paginate %> <!-- calls will_paginate gem & automatically paginates user results -->
+
+<% else %>
+   <p>There are no users to display</p>
+<% end %>

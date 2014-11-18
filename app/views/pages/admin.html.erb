@@ -1,1 +1,17 @@
-<h1>Admin</h1>
+<% provide(:title, 'Admin Control Panel | Protest Australia') %>
+<h1>Admin Control Panel</h1>
+
+<div class="admin-control-panel">
+   <ul>
+      <li class="admin">
+         <%= link_to protests_path(visible: false) do %>
+            <i class="fa fa-asterisk"></i>Hidden protests
+         <% end %>
+      </li>
+      <li class="admin">
+         <%= link_to users_path do %>
+            <i class="fa fa-user"></i>All users
+         <% end %>
+      </li>
+   </ul>
+</div>
