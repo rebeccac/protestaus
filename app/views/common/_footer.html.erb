@@ -1,8 +1,19 @@
 <footer class="footer">
-   <div class="smicons">
-      <i class="fa fa-twitter"></i>
-      <i class="fa fa-facebook"></i>
-      <i class="fa fa-envelope"></i>
+   <div class="political-sites-links">
+      <div class="site"><span class="contactmymp"><%= link_to "Contact My MP", "http://www.contactmymp.com", target: "_blank" %></span></div><div class="site"><span class="pollietweets"><%= link_to "PollieTweets", "http://www.pollietweets.com", target: "_blank" %></span></div><div class="site"><span class="protestaus"><%= link_to "Protest Australia", "http://www.protestaustralia.com", target: "_blank" %></span></div>
    </div>
+   <div class="clear"></div>
+   <hr class="footer-hr">
+   <div class="internal-links">
+      <div class="col"><%= link_to "All Protests", protests_path %><br><%= link_to "Add a Protest", new_path %><% if signed_in? %><br><%= link_to "My Protests", my_protests_path %><% end %></div><div class="col"><%= link_to "Register", new_user_registration_path %><br><%= link_to "Sign In", new_user_session_path %><% if current_user.try(:admin?) %><br><%= link_to "Admin Panel", admin_path %><% end %><br><div class="smicons">
+         <i class="fa fa-twitter"></i>
+         <i class="fa fa-facebook"></i>
+         <i class="fa fa-envelope"></i>
+      </div></div><div class="col">
+         <%= link_to "About Us", about_us_path %><br><%= link_to "Contact Us", contact_us_path %><br>Privacy Policy</div>
+   </div>
+   <div class="clear"></div>
+   <div class="copyright">
       &copy; Protest Australia <%= Time.now.year %>
+   </div>
 </footer>

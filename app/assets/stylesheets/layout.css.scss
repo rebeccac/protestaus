@@ -70,7 +70,7 @@ a {
       width: 100%;
       height: auto;
       z-index: 0;
-      margin: 0 0 100px 0;
+      margin: 0 0 320px 0;
    }
    h1 {
       @include OpenSans;
@@ -396,56 +396,82 @@ header.header {
 
 
 footer.footer {
-//    line-height: 50px;
-//    text-align: center;
-//    @include Helvetica;
-//    font-size: 0.8em;
-//    color: $dark_grey;
-//    position: absolute;
-//    left: 0;
-//    bottom: 0;
-//    height: 50px;
-//    width: 100%;
-//    background-color: #484848;
-//    .smicons {
-//       width: auto;
-//       height: auto;
-//       padding: 0 30px;
-//       display: inline-block;
-//       i {
-//          color: $white;
-//          font-size: 2em;
-//          padding: 0 15px;
-//       }
-//    }
-// }
-line-height: 50px;
-text-align: center;
-@include Helvetica;
-font-size: 0.8em;
-color: $beige;
-position: absolute;
-left: 0;
-bottom: 0;
-height: 50px;
-width: 100%;
-// background-color: $beige;
-display: inline-block;
-background-color: #484848;
-.smicons {
+   text-align: center;
+   color: $med_grey;
    position: absolute;
-   height: 45px;
-   left: 30px;
-   padding: 0 30px;
+   left: 0;
+   bottom: 0;
+   height: 250px;
+   width: 100%;
+   background-color: #262626;
    display: inline-block;
-   line-height: 50px;
-   i {
-      color: $beige;
-      font-size: 2em;
-      padding: 0 15px;
-      line-height: 50px;
+   a:link, a:visited, a:hover, a:active {
+      color: $med_grey;
    }
-}
+   hr.footer-hr {
+      width: 85%;
+      border: 1px solid #333;
+      margin: 0 auto;
+   }
+   .copyright {
+      width: 100%;
+      @include OpenSans;
+      font-size: 0.8em;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+   }
+   .political-sites-links {
+      width: 50%;
+      height: 50px;
+      margin: 10px auto;
+      .site {
+         width: 33%;
+         display: inline-block;
+         text-align: center;
+         .contactmymp {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 100;
+            font-size: 1.7em;
+            color: $med_grey;
+         }
+         .pollietweets {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            font-size: 1.7em;
+            color: $med_grey;
+         }
+         .protestaus {
+            font-family: 'Mohave', cursive;
+            font-weight: 200;
+            font-size: 1.7em;
+            color: $med_grey;
+         }
+      }
+   }
+   .internal-links {
+      width: 100%;
+      margin-top: 25px;
+      .col {
+         width: 33%;
+         display: inline-block;
+         font-family: 'OpenSans', sans-serif;
+         font-size: 1em;
+         line-height: 1.7em;
+         color: $med_grey;
+         vertical-align: top;
+         .smicons {
+            padding: 0 20px;
+            display: inline-block;
+            i {
+               color: $med_grey;
+               font-size: 2em;
+               padding: 0 15px;
+               line-height: 50px;
+            }
+         }
+      }
+   }
 }
 
 
