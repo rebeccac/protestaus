@@ -103,14 +103,17 @@ h4, a.front-page-major-link {
                background-color: $white;
                border: 0;
                display: inline-block;
+               position: relative;
                .title-bar {
                   width: 100%;
                   height: 30px;
                   background-color: $dark_grey;
                   line-height: 30px;
                   font-size: 1em;
-                  color: $white;
                   text-align: left;
+                  a:link, a:visited, a:hover, a:active {
+                     color: $white;
+                  }
                }
                .title-bar-padding {
                   padding: 0 5px;
@@ -131,10 +134,12 @@ h4, a.front-page-major-link {
                      @include Helvetica;
                      font-size: 1em;
                      font-weight: 400;
-                     color: $dark_grey;
                      text-align: center;
                      line-height: 40px;
                      display: inline-block;
+                     a:link, a:visited, a:hover, a:active {
+                        color: $dark_grey;
+                     }
                   }
                   .date-label {
                      display: inline-block;
@@ -149,11 +154,17 @@ h4, a.front-page-major-link {
                   }
                }
                .info2,
-               .info3 {
+               .info3,
+               .info4 {
                   padding: 10px;
                   height: auto;
                   color: $dark_grey;
                   text-align: left;
+               }
+               .info4 {
+                  position:absolute;
+                  bottom:0;
+                  left:0;
                }
             }
          }

@@ -34,6 +34,8 @@ $charcoal: #282828;
 
 $menu-yellow: #f3bf28;
 $emerald: #007a7a;
+$beige: #e0dcd5;
+
 
 
 
@@ -376,8 +378,8 @@ header.header {
       input[type=submit] {
          display: inline-block;
          margin: 0;
-         width: 40px;
-         height: 32px;
+         width: 35px;
+         height: 30px;
          position: relative;
          top: 0;
          right: 0;
@@ -394,28 +396,58 @@ header.header {
 
 
 footer.footer {
-   line-height: 50px;
-   text-align: center;
-   @include Helvetica;
-   font-size: 0.8em;
-   color: $dark_grey;
+//    line-height: 50px;
+//    text-align: center;
+//    @include Helvetica;
+//    font-size: 0.8em;
+//    color: $dark_grey;
+//    position: absolute;
+//    left: 0;
+//    bottom: 0;
+//    height: 50px;
+//    width: 100%;
+//    background-color: #484848;
+//    .smicons {
+//       width: auto;
+//       height: auto;
+//       padding: 0 30px;
+//       display: inline-block;
+//       i {
+//          color: $white;
+//          font-size: 2em;
+//          padding: 0 15px;
+//       }
+//    }
+// }
+line-height: 50px;
+text-align: center;
+@include Helvetica;
+font-size: 0.8em;
+color: $beige;
+position: absolute;
+left: 0;
+bottom: 0;
+height: 50px;
+width: 100%;
+// background-color: $beige;
+display: inline-block;
+background-color: #484848;
+.smicons {
    position: absolute;
-   left: 0;
-   bottom: 0;
-   height: 50px;
-   width: 100%;
-   .smicons {
-      width: auto;
-      height: auto;
-      padding: 0 30px;
-      display: inline-block;
-      i {
-         color: $white;
-         font-size: 2em;
-         padding: 0 15px;
-      }
+   height: 45px;
+   left: 30px;
+   padding: 0 30px;
+   display: inline-block;
+   line-height: 50px;
+   i {
+      color: $beige;
+      font-size: 2em;
+      padding: 0 15px;
+      line-height: 50px;
    }
 }
+}
+
 
 
 

@@ -85,6 +85,13 @@ text-align: center;
       a:hover   { color: $white; }  /* user hovers     */
       a:active  { color: $white; }  /* active links    */
 }
+.blue-text {
+   color: $pale_blue;
+      &:link    { color: $pale_blue; }  /* unvisited links */
+      &:visited { color: $pale_blue; }  /* visited links   */
+      a:hover   { color: $pale_blue; }  /* user hovers     */
+      a:active  { color: $pale_blue; }  /* active links    */
+}
 .highlight {
    font-weight: 200;
    text-decoration: underline;

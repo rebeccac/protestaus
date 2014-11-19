@@ -1,8 +1,9 @@
 <div class="frontpage-protest">
-   <div class="title-bar"><span class="text title-bar-padding"><%= truncate(recent_protest.title, length: 25) %></span></div>
+   <div class="title-bar"><span class="text title-bar-padding"><%= link_to truncate(recent_protest.title, length: 25), recent_protest %></span></div>
    <div class="info1">
-      <div class="state-label"><%= recent_protest.state.upcase %></div><div class="date-label"><%= Date.parse(recent_protest.date.to_s).strftime("%-d-%-m-%Y") %></div>
+      <div class="state-label"><%= link_to recent_protest.state.upcase, protests_path(state: recent_protest.state) %></div><div class="date-label"><%= Date.parse(recent_protest.date.to_s).strftime("%-d-%-m-%Y") %></div>
    </div>
    <div class="info2"><span class="text"><span class="strong">Starts:</span> <%= Time.parse(recent_protest.time.to_s).strftime("%l:%M%P") %></span></div>
    <div class="info3"><span class="text"><span class="strong">Begins at:</span> <%= truncate(recent_protest.starting_location, length: 50) %></span></div>
+   <div class="info4"><%= link_to "View...", recent_protest, class: "text strong blue-text" %></div>
 </div>
