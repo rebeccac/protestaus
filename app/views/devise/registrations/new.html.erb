@@ -1,17 +1,21 @@
-<h2>Sign up</h2>
+<% provide(:title, 'Sign Up | Protest Australia') %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<div class="devise-box">
+   <h3 class="login-subheading header-background">Sign up</h3>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
+        <div><%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %></div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+        <div><%= f.label :password %>
+          <%= f.password_field :password, autocomplete: "off" %></div>
 
-<%= render "devise/shared/links" %>
+        <div><%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+        <div class="submit-button"><%= f.submit "Sign up" %></div>
+      <% end %>
+      <br>
+      <%= render "devise/shared/links" %>
+</div>

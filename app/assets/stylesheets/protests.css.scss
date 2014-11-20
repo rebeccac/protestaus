@@ -56,7 +56,7 @@ ul#protest_list {
    width: 90%;
    margin: 0 auto;
    li {
-      margin: 20px 3px;
+      margin: 20px 2px;
       padding: 0;
    }
 }
@@ -67,101 +67,124 @@ ul#protest_list {
    color: $white;
    height: auto;
    background-color: #fff;
-
-   .details_button {
-      width: 110px;
-      padding: 5px 10px;
-      background-color: $dark_grey;
-      margin: 10px auto;
+   position: relative;
+   .main-protest-body {
       display: block;
-      text-align: center;
-      a {
-         font-family: 'Questrial', sans-serif;
-         color: $white;
-         font-size: 1em;
-         text-align: center;
+      .columns {
+         padding: 0;
+         margin: 0;
       }
-   }
-   .columns {
-      padding: 0;
-      margin: 0;
-   }
-   .circle {
-      position: absolute;
-      top: 0;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      line-height: 45px;
-      text-align: center;
-      margin: 0 7px;
-      padding: 0;
-      display: inline-block;
-      a:link, a:visited, a:hover, a:active {
-         color: $white;
-      }
-   }
-   .info-1, .info-2, .info-3 {
-      width: 100%;
-      display: block;
-      @include Helvetica;
-      color: $white;
-   }
-   .info-2, .info-3 {
-      font-family: 'Questrial', sans-serif;
-      font-size: 1.1em;
-      color: $charcoal;
-   }
-   .info-1 {
-      margin: 0;
-      padding: 0;
-      margin-bottom: 10px;
-      height: 150px;
-      vertical-align: top;
-      line-height: 150px;
-   }
-   .info-2 {
-      margin-top: -150px;
-      margin-bottom: 10px;
-      font-weight: 600;
-      border-bottom: 1px solid #eee;
-   }
-   .info-3 {
-      margin-top: -110px;
-      // background-color: yellow;
-   }
-   .top-layer {
-      position: relative;
-      top: -150px;
-      z-index: 45;
-      margin: 0;
-      padding: 0;
-      height: 150px;
-      vertical-align: top;
-      .state {
-         position: relative;
-         width: 50px;
-         height: 50px;
+      .circle {
+         position: absolute;
+         top: 0;
+         width: 45px;
+         height: 45px;
          border-radius: 50%;
+         line-height: 45px;
          text-align: center;
-         line-height: 50px;
-         background-color: rgba(251,251,251,0.3);
-         color: $dark_grey;
-         margin-left: 10px;
+         margin: 0 7px;
+         padding: 0;
+         display: inline-block;
          a:link, a:visited, a:hover, a:active {
-            font-family: 'Muli', sans-serif;
-            font-size: 1.4em;
+            color: $white;
+         }
+      }
+      .info-1, .info-2, .info-3, .info-4 {
+         width: 100%;
+         display: block;
+         @include Helvetica;
+         color: $white;
+      }
+      .info-2, .info-3 {
+         font-family: 'Questrial', sans-serif;
+         font-size: 1.1em;
+         color: $charcoal;
+      }
+      .info-1 {
+         margin: 0;
+         padding: 0;
+         margin-bottom: 10px;
+         height: 150px;
+         vertical-align: top;
+         line-height: 150px;
+      }
+      .info-2 {
+         margin-top: -150px;
+         margin-bottom: 10px;
+         font-weight: 600;
+         border-bottom: 1px solid #eee;
+      }
+      .info-3 {
+         margin-top: -110px;
+         height: 168px;
+      }
+      .top-layer {
+         position: relative;
+         top: -150px;
+         z-index: 45;
+         margin: 0;
+         padding: 0;
+         height: 150px;
+         vertical-align: top;
+         .state {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            background-color: rgba(251,251,251,0.3);
             color: $dark_grey;
+            margin-left: 10px;
+            a:link, a:visited, a:hover, a:active {
+               font-family: 'Muli', sans-serif;
+               font-size: 1.4em;
+               color: $dark_grey;
+            }
+         }
+      }
+   }
+   .bottom-row {
+      display: block;
+      height: 200px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      .columns {
+         padding: 0;
+         margin: 0;
+      }
+      .info-4 {
+         .details_button {
+            width: 110px;
+            padding: 5px 10px;
+            background-color: $dark_grey;
+            margin: 10px auto;
+            display: block;
+            text-align: center;
+            a {
+               font-family: 'Questrial', sans-serif;
+               color: $white;
+               font-size: 1em;
+               text-align: center;
+            }
          }
       }
    }
 }
 
+
 /* ********** Media queries ********** */
-@media (min-width: 768px) {
-   .protest {
-      // display: inline-block;
+@media (min-width: 1024px) {
+   .protest, .bottom-row {
       width: 30%;
+      height: 376px;
+   }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+   .protest, .bottom-row {
+      // display: inline-block;
+      width: 48%;
       // min-height: 200px;
       // .columns {
       //    padding: 0;
@@ -226,10 +249,10 @@ ul#protest_list {
    .box {
      border-bottom: 1px solid #eee;
    }
-   .protest {
-      display: inline-block;
+   .protest, .bottom-row {
+      // display: inline-block;
       width: 98%;
-      min-height: 200px;
+      // min-height: 200px;
       .columns {
          padding: 0;
          margin: 0;

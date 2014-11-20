@@ -70,7 +70,7 @@ a {
       width: 100%;
       height: auto;
       z-index: 0;
-      margin: 0 0 320px 0;
+      margin: 0 0 400px 0;
    }
    h1 {
       @include OpenSans;
@@ -108,15 +108,15 @@ a {
       margin: 15px 0;
    }
    #message {
-     width: 80%;
-     max-width: 768px;
-     margin: 10px auto;
+     width: 40%;
+     min-width: 250px;
+     margin: 0 auto 10px auto;
      display: block;
      background-color: $cream;
      border: 1px solid #333;
      text-align: center;
      p {
-        margin: 10px 0;
+        margin: 5px 0;
      }
    }
 }

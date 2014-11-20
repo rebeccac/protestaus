@@ -65,10 +65,6 @@
                </div><!-- id:menu-icon -->
          </header>
          <div class="frontpage-content">
-            <% flash.each do |key, value| %>
-               <div id="message"><p><%= value %></p></div>
-            <% end %>
-
              <%= yield %>
          </div>
        </div><!-- container -->
