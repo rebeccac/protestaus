@@ -1,0 +1,567 @@
+$white: #f2f2f2;
+$red: #cc0000;
+$emerald: #007a7a;
+$bright_green: #2cae34;
+$pale_grey: #ccc;
+$med_grey: #555;
+$dark_grey: #333;
+
+@font-face {
+   font-family: 'Mohave';
+   src: font-url('/../fonts/Mohave.otf') format('truetype'),
+        font-url('/../fonts/Mohave.ttf') format('truetype');
+}
+
+html, body {
+   margin: 0;
+   padding: 0;
+
+}
+html {
+   position: relative;
+   min-height: 100%;
+}
+
+body {
+   width: 100%;
+   margin: 0 0 200px; /* bottom = footer height */
+}
+
+
+*:not(body):not(html) {
+   box-sizing:border-box;
+   border: 1px dashed blue;
+}
+
+/* Overridden Foundation Classes */
+
+.row {
+   max-width: 100%;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+}
+
+/* End of Overridden Foundation Classes */
+
+/* General Classes */
+
+.white_text {
+   color: $pale_grey;
+}
+.s-m-i {
+   font-size: 2em;
+   color: $med_grey;
+   line-height: 50px;
+   text-align: center;
+   display: inline-block;
+}
+
+/* End of General Classes */
+
+.container {
+   height: auto;
+   min-height: 100%;
+   background: image-path("background.jpg");
+   background-attachment: fixed;
+   background-position: 100% 100%;
+   background-repeat: no-repeat;
+   //no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   position: relative;
+   top: 0;
+   /* bottom: 0; */
+      .main_content {
+      width: 100%;
+      padding-top: 100px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: auto;
+      min-height: 100%;
+      overflow: auto;
+      .vertical_center {
+         height: 100%;
+         display: table;
+         .raise_your_voice {
+            display: table-cell;
+            vertical-align: middle;
+            font-family: 'Indie Flower', cursive;
+            font-size: 5.8em;
+            color: $pale_grey;
+            text-align: center;
+            line-height: 0.8em;
+         }
+      }
+      .protests {
+      }
+      .recent_protest {
+
+         margin: 10px auto;
+         background-color: rgba(0,0,0,0.4);
+      }
+      .links_box {
+         height: 100%;
+         .top_box {
+            width: 100%;
+            height: 50%;
+            h3.all_protests_header {
+               margin-top: 50px;
+               text-align: center;
+            }
+         }
+         .bottom_box {
+            width: 100%;
+            height: 50%;
+            position: relative;
+            a.register_button {
+               display: block;
+               background-color: $emerald;
+               padding: 0 80px;
+               width: 80%;
+               max-width: 250px;
+               margin: 0 auto;
+               border: 0;
+               font-family: 'Open Sans', sans-serif;
+               font-size: 1.3em;
+               line-height: 50px;
+               color: $pale_grey;
+               text-align: center;
+            }
+         }
+      }
+
+
+   }
+   .layer {
+      background-color: rgba(204,0,0, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+   }
+
+   header.header {
+      width: 100%;
+      height: 50px;
+      background-color: $white;
+      position: fixed;
+      top: 0;
+      z-index: 50;
+      h1.header {
+         font-size: 1.7em;
+         line-height: 50px;
+         color: $med_grey;
+         font-family: 'Oswald', sans-serif;
+         font-weight: 300;
+         margin-top: 0px;
+      }
+      .menu_icon {
+         font-size: 2em;
+         color: $med_grey;
+         padding: 0 10px;
+         line-height: 50px;
+      }
+      a.sign_in_button {
+         line-height: 50px;
+         background-color: $pale_grey;
+         padding: 5px 10px;
+         border: 0;
+         border-radius: 10px;
+         color: $dark_grey;
+         margin: 0 auto;
+      }
+      .search {
+         height: 30px;
+         margin: 10px 0;
+         line-height: 30px;
+      }
+      input[type="submit"].search {
+         background-color: $med_grey;
+      }
+   }
+}
+
+
+
+footer.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   height: auto;
+   min-height: 200px;
+   width: 100%;
+   padding-top: 10px;
+   background-color: $white;
+   .contactmymp {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 100;
+      font-size: 1.7em;
+      color: $med_grey;
+   }
+   .pollietweets {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 1.7em;
+      color: $med_grey;
+   }
+   .protestaus {
+      /* font-family: 'Mohave', cursive; */
+      font-family: 'Oswald', sans-serif;
+      font-weight: 200;
+      font-size: 1.55em;
+      color: $med_grey;
+      line-height: 32px;
+   }
+   hr.footer_hr {
+      width: 85%;
+      border: 1px solid $pale_grey;
+      margin: 10px auto;
+   }
+   .copyright {
+      padding: 10px 0;
+      font-size: 0.8em;
+      color: $dark_grey;
+   }
+}
+
+/* ********** Sliding Menu ********** */
+
+/*
+Global Styles
+======================================
+*/
+
+*, *:before, *:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/*
+Layout
+======================================
+*/
+
+.wrap {
+   position: relative;
+}
+
+/*
+Typography
+======================================
+*/
+
+h2.menu_header {
+   padding-top: 20px;
+   color: #fff;}
+   h2.menu_header,
+   h3.menu_footer {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      text-align: center;
+   }
+   h3.menu_footer {
+      display: inline-block;
+      /* line-height: 30px; */
+      font-size: 2.2em;
+      padding: 0 10px;
+      color: #666;
+   }
+
+   .menu_button_1,
+   .menu_button_2 {
+      height: 40px;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+   }
+
+   .menu_button_1 {
+      background-color: #666;
+   }
+   .menu_button_2 {
+      background-color: #d21f1f;
+   }
+
+   .slider_menu_footer {
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      bottom: 30px;
+      text-align: center;
+   }
+
+   /*
+   Masthead
+   ======================================
+   */
+
+   .menu-link {
+      position: relative;
+      font-size: 2em;
+      line-height: 50px;
+   }
+
+   .menu-link:link,
+   .menu-link:visited,
+   .menu-link:hover,
+   .menu-link:active {
+      color: #555;
+      padding-right: 15px;
+   }
+
+   .subtitle {
+      text-align: center;
+      font-size: 1.125em;
+      margin: .5em 0;
+   }
+
+   .btn-list {
+      margin: 3em 0;
+      text-align: center;
+   }
+
+   .btn-list li {
+      display: inline-block;
+   }
+
+   .btn-list li:first-of-type {
+      margin-right: 1em;
+   }
+
+   .btn {
+      padding: 1em .5em;
+      text-align: center;
+      border-radius: 6px;
+   }
+
+   .btn:link,
+   .btn:visited {
+      background: #25B89A;
+      color: #fff;
+   }
+
+   .btn:hover,
+   .btn:active {
+      background: #16a085;
+   }
+
+   /*
+   Nav Panel
+   ======================================
+   */
+
+   .panel {
+      background: #333;
+      z-index: 9999;
+      border: 0;
+      position: fixed;
+      right: -15.625em; /*or width of your navigation panel*/
+      width: 15.625em; /*should match the above value*/
+      padding: 0;
+   }
+
+   .panel a {
+      display: block;
+   }
+
+   .panel ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 20px;
+   }
+   .panel li {
+      padding: 7px 0;
+   }
+
+   .panel a:link,
+   .panel a:visited {
+      color: #fff;
+      padding-left: 5px;
+   }
+
+   .panel a:hover,
+   .panel a:active {
+      background: #25B89A;
+      padding-left: 5px;
+   }
+
+   .nav-icon {
+      margin-right: 6px;
+   }
+
+   /*
+   Helper Classes
+   -----------------------------------
+   */
+
+   .hide {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+   }
+
+   /*
+   Small Screens
+   -----------------------------------
+   */
+
+   @media only screen and (max-width: 31.25em) {
+
+      .btn-list li {
+         font-size: .75em;
+      }
+
+      .btn-list li:first-of-type {
+         margin-right: .2em;
+      }
+
+   }
+
+
+/* ********** End of Sliding Menu ********** */
+
+
+
+// Small screens
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Small & medium screens
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+
+   header.header .row .columns h1.header {
+      font-size: 1.5em;
+   }
+
+}
+
+
+// Small & medium screens - max-width 1024px
+@media only screen and (max-width: 64em) {
+
+
+   .container {
+   height: auto;
+   min-height: 100%;
+
+      .main_content {
+         height: auto;
+         min-height: 100%;
+         padding-top: 50px;
+
+         .vertical_center {
+            height: auto;
+
+            h2.raise_your_voice { // move Raise Your Voice to top of main_content div
+               padding-top: 15px;
+               vertical-align: top;
+               font-size: 4em;
+            }
+         }
+
+         .links_box {
+            margin-top: -40px;
+            height: auto;
+            .top_box, .bottom_box {
+               display: inline-block;
+               width: 48%;
+               height: auto;
+            }
+         }
+
+         .recent_protest {
+            width: 95%;
+            max-width: 95%;
+            min-width: 95%;
+            height: auto;
+            min-height: 150px;
+            content: '';
+         }
+      }
+   }
+
+}
+// Medium screens
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+.container {
+   min-height: 85%;
+   .main_content {
+      overflow: initial; // default value
+   }
+   .recent_protest {
+      width: auto;
+      min-width: 200px;
+      max-width: 250px;
+      height: auto;
+      min-height: 220px;
+   }
+}}
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {  /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+   .container {
+      .recent_protest {
+         width: auto;
+         min-width: 200px;
+         max-width: 250px;
+         height: auto;
+         min-height: 220px;
+      }
+   }
+}
+// XLarge screens
+@media only screen and (min-width: 90.063em) {
+   .container {
+      .recent_protest {
+         width: auto;
+         min-width: 200px;
+         max-width: 250px;
+         height: auto;
+         min-height: 220px;
+      }
+   }
+ } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+   .container {
+      .recent_protest {
+         width: auto;
+         min-width: 200px;
+         max-width: 250px;
+         height: auto;
+         min-height: 220px;
+      }
+   }
+ } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) {
+   .container {
+      .recent_protest {
+         width: auto;
+         min-width: 200px;
+         max-width: 250px;
+         height: auto;
+         min-height: 220px;
+      }
+   }
+} /* min-width 1921px, xxlarge screens */
