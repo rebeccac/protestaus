@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-   @recent_protests = Protest.visible(params).limit(3).order("id desc")
+   @recent_protests = Protest.visible(params).limit(4).order("id desc")
    render layout: 'frontpage_layout'
    end
 

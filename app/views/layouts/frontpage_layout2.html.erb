@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300|Indie+Flower|Questrial|Alegreya+Sans+SC|Michroma|Quicksand|Josefin+Sans|Muli|Maven+Pro|Karla|PT+Sans+Caption|Julius+Sans+One|Carrois+Gothic+SC|Numans' rel='stylesheet' type='text/css'>
+    <title><%= content_for?(:title) ? yield(:title) : "Protest Australia" %></title>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+     <%= render '/common/menu' %>
+
+     <div class="container push wrap">
+        <div class="layer"></div>
+
+        <%= render '/common/header' %>
+
+      <div class="row main_content">
+         <div class="large-3 large-push-9 medium-12 small-12 columns vertical_center">
+            <h2 class="raise_your_voice">Raise Your Voice</h2>
+         </div>
+         <div class="large-6 large-pull-3 large-uncentered medium-12 small-12 columns medium-centered">
+            <div class="row">
+               <div class="large-12 small-12 columns">
+                  <div class="row">
+                     <div class="large-6 large-uncentered medium-6 medium-uncentered small-11 small-centered columns">
+                        <div class="recent_protest">
+                           <h4 class="white_text text-center">Free Gaza</h4>
+                        </div>
+                     </div>
+                     <div class="large-6 large-uncentered medium-6 medium-uncentered small-11 small-centered columns">
+                        <div class="recent_protest">
+                           <h4 class="white_text text-center">Children Don't Belong in...</h4>
+                        </div>
+                     </div>
+                     <div class="large-6 large-uncentered medium-6 medium-uncentered small-11 small-centered columns">
+                        <div class="recent_protest">
+                           <h4 class="white_text text-center">March in March</h4>
+                        </div>
+                     </div>
+                     <div class="large-6 large-uncentered medium-6 medium-uncentered small-11 small-centered columns">
+                        <div class="recent_protest">
+                           <h4 class="white_text text-center">March Australia</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="large-11 large-offset-1 medium-11 medium-offset-1 columns">
+                        <h4 class="white_text ">Recent protests</h4>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+         <div class="large-3 large-pull-3 small-12 columns links_box">
+            <div class="top_box">
+               <h3 class="white_text all_protests_header">View all protests</h3>
+            </div>
+            <div class="bottom_box">
+               <a href="#" class="register_button">Register</a><p class="white_text text-center">to add a protest</p>
+            </div>
+
+         </div>
+
+      </div>
+   </div><!-- end main_content -->
+   <div class="clear"></div>
+</div><!-- end container -->
+
+
+       <%= render 'common/footer' %>
+       <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <%= javascript_include_tag "application" %>
+      <script>
+      $(document).ready(function() {
+         $('.menu-link').bigSlide();
+      });
+      </script>
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-543e57250f8eea8c" async></script>
+
+  </body>
+</html>

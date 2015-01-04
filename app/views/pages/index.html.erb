@@ -1,37 +1,40 @@
 <% provide(:title, 'Protest Australia') %>
 
-<div class="top-box">
-   <div class="top-raise-your-voice">Raise Your Voice</div>
-   <div class="recent-protests-outside-box">
-
-      <div class="recent-protests-inside-box">
-         <% if @recent_protests.any? %>
+<div class="row main_content">
+   <div class="large-3 large-push-9 medium-12 small-12 columns vertical_center">
+      <h2 class="raise_your_voice">Raise Your Voice</h2>
+   </div>
+   <div class="large-6 large-pull-3 large-uncentered medium-12 small-12 columns medium-centered">
+      <div class="row">
+         <div class="large-12 small-12 columns">
+            <div class="row">
+               <% if @recent_protests.any? %>
                <%= render partial: "pages/recent_protest", collection: @recent_protests %>
-   		<% else %>
-   			<p class="white-text">There are no protests available</p>
-   		<% end %>
+               <% else %>
+               <p class="white-text">There are no protests available</p>
+               <% end %>
 
+            </div>
+            <div class="row">
+               <div class="large-11 large-offset-1 medium-11 medium-offset-1 columns">
+                  <h4 class="white_text ">Recent protests</h4>
+               </div>
+            </div>
+         </div>
 
-         <div class="clear"></div>
-         <div class="left-align-box"><%= link_to "View all protests", protests_path, class:"front-page-major-link" %></div>
       </div>
+
+   </div>
+   <div class="large-3 large-pull-3 small-12 columns links_box">
+      <div class="top_box">
+         <h3 class="white_text all_protests_header">View all protests</h3>
+      </div>
+      <div class="bottom_box">
+         <a href="#" class="register_button">Register</a><p class="white_text text-center">to add a protest</p>
+      </div>
+
    </div>
 
-   <div class="vertical-center-outside-box vertical-center-30-100">
-     <div class="vertical-center-raise-your-voice vertical-center-absolute-center">
-       <div class="vertical-center-quote-box vertical-center-absolute-center">Raise<br>Your<br>Voice</div>
-    </div><!-- inside absolute-center -->
-  </div><!-- outside-box -->
-  <div class="clear"></div>
-  <div class="top-box-lower-row"></div><div class="top-box-lower-row">
-  <%= link_to "Register", new_user_registration_path, class: "register-button" %> <h4>to add a protest</h4>
-  </div>
-</div><!-- top-box -->
-
-
+</div>
+</div><!-- end main_content -->
 <div class="clear"></div>
-<div class="bottom-box">
-   <div class="bottom-box-child">
-      <div class="center"><h2 class="front-page-title">Protest</h2><%= image_tag("australia.png", size: "94x78", alt: "Icon of Map of Australia", class: "australia") %> <h2 class="front-page-title">Australia</h2></div>
-   </div>
-</div><!-- bottom-box -->
