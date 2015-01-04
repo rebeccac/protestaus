@@ -17,6 +17,7 @@
 
      <div class="container push wrap">
         <div class="layer"></div>
+
         <%= render '/common/header' %>
 
       <div class="row main_content">
@@ -74,10 +75,9 @@
 </div><!-- end container -->
 
 
-       <%= render 'common/frontpage_footer' %>
-
+       <%= render 'common/footer' %>
+       <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
       <%= javascript_include_tag "application" %>
-      <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script>
       $(document).ready(function() {
          $('.menu-link').bigSlide();
