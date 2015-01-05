@@ -19,7 +19,7 @@
                   <i class="fi-social-facebook s-m-i"></i>
                </div>
                <div class="medium-3 hide-for-small-only columns">
-                  <a class="sign_in_button" href="#">Sign in</a>
+                  <% if signed_in? %><%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "sign_in_out_button" %><% else %><%= link_to "Sign in", new_user_session_path, class: "sign_in_out_button" %><% end %><!--<a class="sign_in_out_button" href="#">Sign in</a>-->
                </div>
                <div class="medium-offset-0 small-1 small-offset-1 columns">
                   <a href="#menu" class="menu-link">&#9776;</a>

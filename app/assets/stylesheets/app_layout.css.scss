@@ -162,7 +162,7 @@ body {
          padding: 0 10px;
          line-height: 50px;
       }
-      a.sign_in_button {
+      a.sign_in_out_button {
          line-height: 50px;
          background-color: $pale_grey;
          padding: 5px 10px;
@@ -221,6 +221,9 @@ footer.footer {
    .copyright {
       padding: 10px 0;
       font-size: 0.8em;
+      color: $dark_grey;
+   }
+   a {
       color: $dark_grey;
    }
 }

@@ -1,17 +1,18 @@
 <nav id="menu" class="menu_panel" role="navigation">
    <h2 class="menu_header">PROTEST AUSTRALIA</h2>
    <div class="row">
-      <div class="small-6 columns menu_button_1">Sign In</div>
-      <div class="small-6 columns menu_button_2">Register</div>
+      <div class="small-6 columns menu_button_1"><% if signed_in? %><%= link_to "My Protests", my_protests_path %><% else %><%= link_to "Register", new_user_registration_path %><% end %></div>
+      <div class="small-6 columns menu_button_2"><% if signed_in? %><%= link_to "Sign Out", destroy_user_session_path, :method => :delete  %><% else %><%= link_to "Sign In", new_user_session_path %><% end %></div>
    </div>
    <ul>
-      <li role="button"><a href="#">Home</a></li>
-      <li role="button"><a href="#">Protests</a></li>
-      <li role="button"><a href="#">Add a Protest</a></li>
-      <li role="button"><a href="#">My Protests</a></li>
-      <li role="button"><a href="#">Related Sites</a></li>
-      <li role="button"><a href="#">About Us</a></li>
-      <li role="button"><a href="#">Contact Us</a></li>
+      <li role="button"><%= link_to "Home", root_path %></li>
+      <li role="button"><%= link_to "Protests", protests_path %></li>
+      <li role="button"><%= link_to "Add a Protest", new_protest_path %></li>
+      <li role="button"><% if signed_in? %><%= link_to "My Protests", my_protests_path %><% end %></li>
+      <li role="button"><%= link_to "Related Sites", related_sites_path %></li>
+      <li role="button"><%= link_to "About Us", about_us_path %></li>
+      <li role="button"><%= link_to "Contact", contact_us_path %></li>
+      <li role="button"><% if current_user.try(:admin?) %><%= link_to "Admin", admin_path %><% end %>
    </ul>
    <div class="slider_menu_footer">
       <h3 class="menu_footer"><i class="fi-social-twitter"></i></h3><h3 class="menu_footer"><i class="fi-social-facebook"></i></h3><h3 class="menu_footer"><i class="fi-mail"></i></h3>
