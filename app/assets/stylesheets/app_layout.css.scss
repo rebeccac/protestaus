@@ -48,6 +48,9 @@ body {
 
 .white_text {
    color: $pale_grey;
+   a:link, a:hover, a:active, a:visited {
+      color: $pale_grey;
+   }
 }
 .s-m-i {
    font-size: 2em;
@@ -92,13 +95,48 @@ body {
             line-height: 0.8em;
          }
       }
-      .protests {
-      }
       .recent_protest {
-
          margin: 10px auto;
-         background-color: rgba(0,0,0,0.4);
+         background-color: $white;
+         .row {
+            margin: 0;
+            padding: 0;
+         }
+         h4.recent_protest_header {
+            font-size: 1.45em;
+            padding-left: 5px;
+            a {
+               color: $dark_grey;
+            }
+         }
+         .state-label {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1em;
+            border-radius: 10% 50%;
+               a:link, a:hover, a:active, a:visited {
+                  color: $white;
+                  font-size: 1em;
+                  font-weight: 300;
+                  letter-spacing: 1px;
+               }
+         }
+         .date-label {
+            position: relative;
+            top: 5px;
+            margin-left: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+            font-weight: 300;
+            color: $dark_grey;
+            letter-spacing: 1px;
+
+         }
       }
+
       .links_box {
          height: 100%;
          .top_box {

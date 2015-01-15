@@ -1,5 +1,20 @@
 <div class="large-6 large-uncentered medium-6 medium-uncentered small-11 small-centered columns">
    <div class="recent_protest">
-      <h4 class="white_text text-center"><%= link_to truncate(recent_protest.title, length: 25), recent_protest %></h4>
-   </div>
+
+      <div class="row">
+         <div class="small-12 columns">
+            <h4 class="recent_protest_header"><%= link_to truncate(recent_protest.title, length: 18), recent_protest %></h4>
+         </div>
+      </div><!-- row -->
+
+      <div class="row">
+         <div class="small-3 columns">
+            <div class="state-label text-center <%= recent_protest.state.downcase %>"><%= link_to recent_protest.state.upcase, protests_path(state: recent_protest.state) %></div>
+         </div>
+         <div class="small-9 columns">
+            <span class="date-label"><%= Date.parse(recent_protest.date.to_s).strftime("%a %-d-%-m-%Y") %></span>
+         </div>
+      </div><!-- row -->
+
+   </div> <!-- recent_protest -->
 </div>
