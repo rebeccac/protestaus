@@ -16,5 +16,23 @@
          </div>
       </div><!-- row -->
 
+      <div class="row">
+         <div class="small-12 columns">
+            <div class="recent_protest_info"><span class="strong">Starts:</span> <%= Time.parse(recent_protest.time.to_s).strftime("%l:%M%P") %></div>
+         </div>
+      </div><!-- row -->
+
+      <div class="row">
+         <div class="small-12 columns">
+            <div class="recent_protest_info"><span class="strong">Starts at:</span> <%= truncate(recent_protest.starting_location, length: 50) %></div>
+         </div>
+      </div><!-- row -->
+
+      <div class="row">
+         <div class="small-6 small-offset-6 columns">
+            <div class="recent_protest_info"><%= link_to "More info...", recent_protest %></div>
+         </div>
+      </div><!-- row -->
+
    </div> <!-- recent_protest -->
 </div>
