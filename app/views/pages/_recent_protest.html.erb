@@ -28,11 +28,18 @@
          </div>
       </div><!-- row -->
 
-      <div class="row">
-         <div class="small-6 small-offset-6 columns">
+      <div class="row top-margin-20px">
+         <div class="small-5 columns">
+            <div class="addthis_toolbox addthis_default_style" addthis:title="<%= recent_protest.title %>" addthis:description="via @protestaus" addthis:url="http://www.protestaustralia.com/protests/<%= recent_protest.id %>">
+               <a class="addthis_button_compact"><i class="fi-share s-b"></i> Share</a>
+            </div>
+         </div>
+         <div class="small-7 columns">
             <div class="recent_protest_info"><%= link_to "More info...", recent_protest %></div>
          </div>
-      </div><!-- row -->
+      </div><!-- row bottom_align -->
+
+
 
    </div> <!-- recent_protest -->
 </div>

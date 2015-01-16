@@ -1,7 +1,7 @@
 <header class="header push wrap">
    <div class="row">
       <div class="large-3 medium-4 small-9 columns white_text"><h1 class="header">PROTEST AUSTRALIA</h1></div>
-      <div class="large-5 medium-8 large-offset-3 small-2 columns">
+      <div class="large-5 medium-8 large-offset-3 small-3 columns">
          <div class="row">
             <div class="large-6 large-offset-0 medium-5 medium-offset-3 hide-for-small-only columns">
                <div class="row collapse">
@@ -21,7 +21,7 @@
                <div class="medium-3 hide-for-small-only columns">
                   <% if signed_in? %><%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "sign_in_out_button" %><% else %><%= link_to "Sign in", new_user_session_path, class: "sign_in_out_button" %><% end %><!--<a class="sign_in_out_button" href="#">Sign in</a>-->
                </div>
-               <div class="medium-offset-0 small-1 small-offset-1 columns">
+               <div class="medium-offset-0 small-1 small-offset-1 columns no-padding">
                   <a href="#menu" class="menu-link">&#9776;</a>
                </div>
             </div>
