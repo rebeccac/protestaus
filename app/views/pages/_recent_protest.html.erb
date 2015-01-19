@@ -1,9 +1,9 @@
 <div class="large-6 large-uncentered medium-6 medium-uncentered small-11 small-centered columns">
    <div class="recent_protest">
 
-      <div class="row">
+      <div class="row top_row">
          <div class="small-12 columns">
-            <h4 class="recent_protest_header"><%= link_to truncate(recent_protest.title, length: 18), recent_protest %></h4>
+            <h4 class="recent_protest_header"><%= link_to truncate(recent_protest.title, length: 25), recent_protest %></h4>
          </div>
       </div><!-- row -->
 
@@ -16,7 +16,7 @@
          </div>
       </div><!-- row -->
 
-      <div class="row">
+      <!-- <div class="row">
          <div class="small-12 columns">
             <div class="recent_protest_info"><span class="strong">Starts:</span> <%= Time.parse(recent_protest.time.to_s).strftime("%l:%M%P") %></div>
          </div>
@@ -37,9 +37,13 @@
          <div class="small-7 columns">
             <div class="recent_protest_info"><%= link_to "More info...", recent_protest %></div>
          </div>
-      </div><!-- row bottom_align -->
-
-
-
+      </div><!-- row top-margin-20px -->
    </div> <!-- recent_protest -->
+   <div class="bottom">
+      <div class="row">
+         <div class="small-12 columns">
+            <h4 class="recent_protest_header"><%= Time.parse(recent_protest.time.to_s).strftime("%l:%M%P") %></h4>
+         </div>
+      </div>
+   </div>
 </div>
