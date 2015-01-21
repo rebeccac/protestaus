@@ -89,6 +89,18 @@ body {
    background-size: cover;
    position: relative;
    top: 0;
+}
+
+.container_pages {
+   height: auto;
+   min-height: 100%;
+   background-color: #fff;
+   position: relative;
+   top: 30px;
+   padding-top: 10px;
+}
+
+.container, .container_pages {
       .main_content {
       width: 100%;
       padding-top: 100px;
@@ -220,20 +232,16 @@ body {
       position: fixed;
       top: 0;
       z-index: 50;
-      h1.header {
+      h2.header {
          font-size: 1.7em;
          line-height: 50px;
-         color: $med_grey;
          font-family: 'Oswald', sans-serif;
          font-weight: 300;
-         margin-top: 0px;
+         margin: 0;
+         a:link, a:hover, a:visited, a:active {
+            color: $med_grey;
+         }
       }
-      /* .menu_icon {
-         font-size: 2em;
-         color: \$med_grey;
-         padding: 0 10px;
-         line-height: 50px;
-      } */
       a.sign_in_out_button {
          line-height: 50px;
          background-color: $pale_grey;

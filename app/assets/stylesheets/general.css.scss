@@ -100,6 +100,14 @@ text-align: center;
    font-weight: 200;
    text-decoration: underline;
 }
+h1 {
+   @include OpenSans;
+   font-size: 2em;
+   color: $dark_grey;
+   letter-spacing: 1px;
+   margin: 0;
+   padding: 0 15px;;
+}
 
  h3.subheading {
     @include OpenSans;

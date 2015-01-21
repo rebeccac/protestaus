@@ -1,5 +1,5 @@
 <%= provide(:title, "Join the protest in #{@protest.state} - #{@protest.title}, #{Date.parse(@protest.date.to_s).strftime("%e %B %Y")}  | Protest Australia") %>
-<h1><%= @protest.title %></h1>
+<h1><%= @protest.state.upcase %>: <%= @protest.title %></h1>
 
 <div class="row">
 	<% if current_user.try(:admin?) %>
