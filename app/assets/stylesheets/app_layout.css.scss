@@ -114,7 +114,7 @@ body {
          font-size: 1em;
          padding-left: 0;
          color: $med_grey;
-         a {
+         a:link, a:hover, a:active, a:visited {
             color: $med_grey;
          }
       }
@@ -171,17 +171,6 @@ body {
                a:link, a:hover, a:active, a:visited {
                   color: $white;
                }
-         }
-         .date-label {
-            position: relative;
-            top: 5px;
-            margin-left: 10px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1em;
-            font-weight: 300;
-            color: $dark_grey;
-            letter-spacing: 1px;
-
          }
       }
 

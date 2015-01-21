@@ -16,12 +16,6 @@
          </div>
       </div><!-- row -->
 
-      <!-- <div class="row">
-         <div class="small-12 columns">
-            <div class="recent_protest_info"><span class="strong">Starts:</span> <%= Time.parse(recent_protest.time.to_s).strftime("%l:%M%P") %></div>
-         </div>
-      </div><!-- row -->
-
       <div class="row">
          <div class="small-12 columns">
             <div class="recent_protest_info"><span class="strong">Starts at:</span> <%= truncate(recent_protest.starting_location, length: 50) %></div>
@@ -41,8 +35,11 @@
    </div> <!-- recent_protest -->
    <div class="bottom">
       <div class="row">
-         <div class="small-12 columns">
+         <div class="small-3 columns">
             <h4 class="recent_protest_header"><%= Time.parse(recent_protest.time.to_s).strftime("%l:%M%P") %></h4>
+         </div>
+         <div class="small-8 small-offset-1 columns">
+            <h4 class="recent_protest_header"><%= Date.parse(recent_protest.date.to_s).strftime("%a %-d-%-m-%Y") %></h4>
          </div>
       </div>
    </div>
