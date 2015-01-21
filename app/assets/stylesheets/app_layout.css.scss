@@ -35,11 +35,15 @@ body {
    //border: 1px dashed blue;
 }
 
+.right {
+   float: right;
+}
+.left {
+   float: left;
+}
 
 .blue_background {
    background-color: blue;
-   /* position: relative;
-   width: 100%; */
    height: 30px;
    content: '';
 }
@@ -73,9 +77,6 @@ body {
    padding: 0 !important;
 }
 
-.top-margin-20px {
-   margin-top: 20px !important;
-}
 /* End of General Classes */
 
 .container {
@@ -146,14 +147,10 @@ body {
          .top_row {
             background-color: #dbdbdb;
             margin-bottom: 3px !important;
+            height: 30px;
+            line-height: 30px;
          }
 
-         .s-b { // share-button
-            color: $med_grey;
-            padding: 0 !important;
-            margin: 0 !important;
-            font-size: 1em;
-         }
          .recent_protest_info {
             font-family: 'Open Sans', sans-serif;
             font-size: 1em;

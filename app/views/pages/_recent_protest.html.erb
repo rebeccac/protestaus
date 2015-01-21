@@ -11,27 +11,24 @@
          <div class="small-3 columns">
             <div class="state-label text-center <%= recent_protest.state.downcase %>"><%= link_to recent_protest.state.upcase, protests_path(state: recent_protest.state) %></div>
          </div>
-         <div class="small-9 columns">
-            <span class="date-label"><%= Date.parse(recent_protest.date.to_s).strftime("%a %-d-%-m-%Y") %></span>
+         <div class="small-3 small-offset-6 columns">
+            <div class="addthis_toolbox addthis_default_style" addthis:title="<%= recent_protest.title %>" addthis:description="via @protestaus" addthis:url="http://www.protestaustralia.com/protests/<%= recent_protest.id %>">
+               <a class="addthis_button_compact"><img src="assets/share.png" width="25px" height="25px" class="right" alt="Share button"> </a>
+            </div>
          </div>
       </div><!-- row -->
 
       <div class="row">
          <div class="small-12 columns">
-            <div class="recent_protest_info"><span class="strong">Starts at:</span> <%= truncate(recent_protest.starting_location, length: 50) %></div>
+            <div class="recent_protest_info"><%= truncate(recent_protest.description, length: 100) %></div>
          </div>
       </div><!-- row -->
 
-      <div class="row top-margin-20px">
-         <div class="small-5 columns">
-            <div class="addthis_toolbox addthis_default_style" addthis:title="<%= recent_protest.title %>" addthis:description="via @protestaus" addthis:url="http://www.protestaustralia.com/protests/<%= recent_protest.id %>">
-               <a class="addthis_button_compact"><i class="fi-share s-b"></i> Share</a>
-            </div>
-         </div>
-         <div class="small-7 columns">
+      <div class="row">
+         <div class="small-7 small-offset-5 columns">
             <div class="recent_protest_info"><%= link_to "More info...", recent_protest %></div>
          </div>
-      </div><!-- row top-margin-20px -->
+      </div><!-- row -->
    </div> <!-- recent_protest -->
    <div class="bottom">
       <div class="row">
