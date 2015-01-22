@@ -61,6 +61,22 @@ ul#protest_list {
    }
 }
 
+.disabled-icon {
+   color: $med_grey;
+}
+
+.margin-bottom-50px {
+   margin-bottom: 50px;
+}
+
+.state-header {
+   border-radius: 10% 50%;
+   padding: 0 5px;
+   a:link, a:hover, a:active, a:visited {
+      color: $white;
+   }
+}
+
 .protest {
    border: 1px solid $pale_grey;
    display: inline-block;

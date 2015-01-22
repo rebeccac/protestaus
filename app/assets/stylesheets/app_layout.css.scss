@@ -42,6 +42,10 @@ body {
    float: left;
 }
 
+.margin-bottom-100px {
+   margin-bottom: 50px;
+}
+
 .blue_background {
    background-color: blue;
    height: 30px;
@@ -102,8 +106,11 @@ body {
 
 .container, .container_pages {
       .main_content {
+         padding-top: 100px;
+      }
+      .main_content, .main {
       width: 100%;
-      padding-top: 100px;
+      /* padding-top: 100px; */
       position: absolute;
       top: 0;
       bottom: 0;

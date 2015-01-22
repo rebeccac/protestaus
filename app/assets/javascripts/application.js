@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+
+//= require foundation.min
+//= require foundation.equalizer
+//= require jquery.bigslide
