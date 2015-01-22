@@ -21,7 +21,7 @@ $maroon: #590902;
 
 $white: #fdfdfd;
 $dark_grey: #444444;
-$med_grey: #a2a2a2;
+$med_grey: #555;
 $pale_grey: #cccccc;
 $charcoal: #282828;
 
@@ -52,6 +52,15 @@ $charcoal: #282828;
 }
 
 
+.s-container {
+   width: 145px;
+   margin: 5px auto 5px auto;
+   position: relative;
+   .addthis_sharing_toolbox {
+      height: 33px;
+   }
+}
+
 ul#protest_list {
    width: 90%;
    margin: 0 auto;
@@ -75,6 +84,14 @@ ul#protest_list {
    a:link, a:hover, a:active, a:visited {
       color: $white;
    }
+}
+
+h3.info-header {
+   font-size: 1.5em;
+   color: $med_grey;
+   letter-spacing: 1px;
+   padding-bottom: 5px;
+
 }
 
 .protest {
@@ -199,65 +216,23 @@ ul#protest_list {
 }
 @media (min-width: 768px) and (max-width: 1023px){
    .protest, .bottom-row {
-      // display: inline-block;
       width: 48%;
-      // min-height: 200px;
-      // .columns {
-      //    padding: 0;
-      //    margin: 0;
-      // }
-
-      // .info-1 {
-      //    height: 130px;
-      //    // vertical-align: bottom;
-      //    h3.protest-heading {
-      //       font-size: 1.1em;
-      //    }
-      // }
-      // .info-2 {
-      //    margin-top: -100px;
-      //    // height: 40px;
-      //    // line-height: 40px;
-      //    // font-size: 0.9em;
-      //    // padding: 0 10px;
-      // }
-      // .info-3 {
-      //    margin-top: -60px;
-      //    // height: 110px;
-      //    // font-size: 0.9em;
-      //    // padding: 5px 0;
-      // }
    }
 }
 @media (min-width: 667px) and (max-width: 767px) {
    .protest {
-      // display: inline-block;
-      // width: 50%;
-      // min-height: 200px;
-      // .columns {
-      //    padding: 0;
-      //    margin: 0;
-      // }
 
       .info-1 {
          height: 70px;
-         // vertical-align: bottom;
          h3.protest-heading {
             font-size: 1.1em;
          }
       }
       .info-2 {
          margin-top: -70px;
-         // height: 40px;
-         // line-height: 40px;
-         // font-size: 0.9em;
-         // padding: 0 10px;
       }
       .info-3 {
          margin-top: -40px;
-         // height: 110px;
-         // font-size: 0.9em;
-         // padding: 5px 0;
       }
    }
 }
@@ -266,9 +241,7 @@ ul#protest_list {
      border-bottom: 1px solid #eee;
    }
    .protest, .bottom-row {
-      // display: inline-block;
       width: 98%;
-      // min-height: 200px;
       .columns {
          padding: 0;
          margin: 0;

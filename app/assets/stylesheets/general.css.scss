@@ -34,6 +34,21 @@ $charcoal: #282828;
 
 $menu-yellow: #f3bf28;
 
+
+/* ********** Foundation overrides ********** */
+
+.panel.callout_green {
+   border-style: solid;
+   border-width: 1px;
+   border-color: #b9ffbd;
+   margin-bottom: 1.25rem;
+   padding: 1.25rem;
+   background: #f1ffef;
+   color: #333333; }
+
+/* ********** End of Foundation overrides ********** */
+
+
 ul {
    list-style: none;
 }
@@ -61,6 +76,12 @@ text-align: center;
    padding-left: 20px;
 }
 
+hr.dotted {
+   border: none;
+   border-top: 1px dotted #ccc;
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
 .dark-grey-text {
    color: $dark_grey;
       &:link    { color: $dark_grey; }  /* unvisited links */

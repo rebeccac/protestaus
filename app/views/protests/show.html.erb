@@ -3,7 +3,7 @@
 <h1><span class="state-header <%= @protest.state.downcase %>"><%= link_to @protest.state.upcase, protests_path(state: @protest.state) %></span> <%= @protest.title %></h1>
 	<div class="row">
 		<% if current_user.try(:admin?) %>
-			<div class="large-12 columns">
+			<div class="small-12 columns">
 				<div class="box admin-box">
 					<h3 class="subheading">Admin:</h3>
 					<p>User ID: <%= @user.id %></p>
@@ -19,7 +19,7 @@
 		<div class="row" data-equalizer>
 
 			<div class="medium-6 small-12 columns">
-				<div class="panel" data-equalizer-watch>
+				<div class="panel callout_green" data-equalizer-watch>
 					<div class="row">
 						<div class="small-3 columns"><%= Time.parse(@protest.time.to_s).strftime("%H:%M%P") %></div>
 						<div class="small-9 columns"><%= Date.parse(@protest.date.to_s).strftime("%A %e %B %Y") %></div>
@@ -28,8 +28,24 @@
 			</div>
 
 			<div class="medium-6 small-12 columns">
-				<div class="panel" data-equalizer-watch>
-					Description: <%= @protest.description %>
+				<div class="panel callout_green" data-equalizer-watch>
+					<%= @protest.description %>
+				</div>
+			</div>
+
+		</div><!-- row -->
+
+		<div class="row" data-equalizer>
+
+			<div class="medium-6 small-12 columns">
+				<div class="panel callout" data-equalizer-watch>
+					<h3 class="info-header">Starting location</h3> <%= @protest.starting_location %>
+				</div>
+			</div>
+
+			<div class="medium-6 small-12 columns">
+				<div class="panel callout" data-equalizer-watch>
+					<h3 class="info-header">March route</h3> <%= @protest.march_route %>
 				</div>
 			</div>
 
@@ -39,23 +55,7 @@
 
 			<div class="medium-6 small-12 columns">
 				<div class="panel" data-equalizer-watch>
-					Starting location: <%= @protest.starting_location %>
-				</div>
-			</div>
-
-			<div class="medium-6 small-12 columns">
-				<div class="panel" data-equalizer-watch>
-					March route: <%= @protest.march_route %>
-				</div>
-			</div>
-
-		</div><!-- row -->
-
-		<div class="row" data-equalizer>
-
-			<div class="medium-6 small-12 columns">
-				<div class="panel" data-equalizer-watch>
-					<p><span class="highlight red-text">More info</span> <% unless @protest.more_info.empty? %>
+					<h3 class="info-header">More info</h3> <% unless @protest.more_info.empty? %>
 						<%= @protest.more_info %><br>
 						<% else %>
 						N/A<br>
