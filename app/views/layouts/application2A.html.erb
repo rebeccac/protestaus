@@ -14,15 +14,14 @@
 
 <body>
 
-   <div class="main_body">
-      <%= render '/common/menu' %>
-      <%= render 'common/header' %>
-      <div class="push-50px">
-         <%= yield %>
-      </div>
+   <%= render '/common/menu' %>
 
-      <div class="gap"></div>
-   </div>
+   <div class="container_pages push wrap">
+
+      <%= render '/common/header' %>
+
+      <%= yield %>
+   </div><!-- container_pages -->
 
    <%= render 'common/footer' %>
 

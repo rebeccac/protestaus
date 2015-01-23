@@ -1,0 +1,107 @@
+$white: #f2f2f2;
+$red: #cc0000;
+$emerald: #007a7a;
+$bright_green: #2cae34;
+$pale_grey: #ccc;
+$med_grey: #555;
+$dark_grey: #333;
+$orange: #f17a36;
+
+
+.main_body {
+   min-height: 100%;
+   height: auto !important;
+   height: 100%;
+   margin: 0 auto -200px;
+   .push-50px {
+      padding-top: 50px;
+   }
+}
+
+
+
+header.header {
+   width: 100%;
+   height: 50px;
+   background-color: $white;
+   position: fixed;
+   top: 0;
+   z-index: 50;
+   h2.header {
+      font-size: 1.7em;
+      line-height: 50px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      margin: 0;
+      a:link, a:hover, a:visited, a:active {
+         color: $med_grey;
+      }
+   }
+   a.sign_in_out_button {
+      line-height: 50px;
+      background-color: $pale_grey;
+      padding: 5px 10px;
+      border: 0;
+      border-radius: 10px;
+      color: $dark_grey;
+      margin: 0 auto;
+   }
+   .search {
+      height: 30px;
+      margin: 10px 0;
+      line-height: 30px;
+   }
+   input[type="submit"].search {
+      background-color: $med_grey;
+   }
+}
+
+
+footer.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   height: auto;
+   min-height: 200px;
+   width: 100%;
+   padding-top: 10px;
+   background-color: $white;
+   .contactmymp {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 100;
+      font-size: 1.7em;
+      color: $med_grey;
+   }
+   .pollietweets {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 1.7em;
+      color: $med_grey;
+   }
+   .protestaus {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 200;
+      font-size: 1.55em;
+      color: $med_grey;
+      line-height: 32px;
+   }
+   hr.footer_hr {
+      width: 85%;
+      border: 1px solid $pale_grey;
+      margin: 10px auto;
+   }
+   .copyright {
+      padding: 10px 0;
+      font-size: 0.8em;
+      color: $dark_grey;
+   }
+   a {
+      color: $dark_grey;
+   }
+}
+
+
+
+.gap {
+   height: 200px;
+}
