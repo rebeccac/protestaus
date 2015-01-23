@@ -51,16 +51,6 @@ $charcoal: #282828;
    background-color: $purple;
 }
 
-
-.s-container {
-   width: 145px;
-   margin: 5px auto 5px auto;
-   position: relative;
-   .addthis_sharing_toolbox {
-      height: 33px;
-   }
-}
-
 ul#protest_list {
    width: 90%;
    margin: 0 auto;
@@ -84,6 +74,46 @@ ul#protest_list {
    a:link, a:hover, a:active, a:visited {
       color: $white;
    }
+}
+
+.dotted-border-container { // time/date & AddThis icons
+   border-top: 1px dotted #ccc;
+   border-bottom: 1px dotted #ccc;
+   margin-bottom: 10px;
+   .time-date {
+      margin: 10px 0;
+   }
+   .time-date-header {
+      line-height: 33px;
+      font-size: 1.5em;
+      color: $med_grey;
+      letter-spacing: 1px;
+      @include OpenSans;
+   }
+}
+
+.info-box {
+   background-color: #f8f8f8;
+   border: 1px solid #d1d1d1;
+   padding: 3px;
+   border-radius: 5px;
+   box-shadow: 5px 5px 5px #d1d1d1;
+   margin-bottom: 15px;
+}
+.box-border-green {
+      border-left: 15px solid #7abb77;
+}
+.box-border-red {
+   border-left: 15px solid #e85757;
+}
+.box-border-blue {
+   border-left: 15px solid #676bdb;
+}
+.box-border-yellow {
+   border-left: 15px solid #e5dd3c;
+}
+.box-border-purple {
+   border-left: 15px solid #aa69cd;
 }
 
 h3.info-header {

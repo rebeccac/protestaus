@@ -13,59 +13,20 @@
 		<% end %>
 	</div><!-- row -->
 
-	<%= render 'common/share' %>
+	<div class="row dotted-border-container">
+		<div class="large-7 medium-12 small-12 columns time-date">
+			<span class="time-date-header"><%= Time.parse(@protest.time.to_s).strftime("%H:%M%P") %>, <%= Date.parse(@protest.date.to_s).strftime("%A %e %B %Y") %></span>
+		</div>
+		<div class="hide-for-large-only medium-12 small-12 columns"><hr class="dotted"></div>
+		<div class="large-5 medium-12 small-12 columns"><%= render 'common/share' %></div>
+	</div><!-- row -->
 
 
-		<div class="row" data-equalizer>
 
-			<div class="medium-6 small-12 columns">
-				<div class="panel callout_green" data-equalizer-watch>
-					<div class="row">
-						<div class="small-3 columns"><%= Time.parse(@protest.time.to_s).strftime("%H:%M%P") %></div>
-						<div class="small-9 columns"><%= Date.parse(@protest.date.to_s).strftime("%A %e %B %Y") %></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="medium-6 small-12 columns">
-				<div class="panel callout_green" data-equalizer-watch>
-					<%= @protest.description %>
-				</div>
-			</div>
-
-		</div><!-- row -->
-
-		<div class="row" data-equalizer>
-
-			<div class="medium-6 small-12 columns">
-				<div class="panel callout" data-equalizer-watch>
-					<h3 class="info-header">Starting location</h3> <%= @protest.starting_location %>
-				</div>
-			</div>
-
-			<div class="medium-6 small-12 columns">
-				<div class="panel callout" data-equalizer-watch>
-					<h3 class="info-header">March route</h3> <%= @protest.march_route %>
-				</div>
-			</div>
-
-		</div><!-- row -->
-
-		<div class="row" data-equalizer>
-
-			<div class="medium-6 small-12 columns">
-				<div class="panel" data-equalizer-watch>
-					<h3 class="info-header">More info</h3> <% unless @protest.more_info.empty? %>
-						<%= @protest.more_info %><br>
-						<% else %>
-						N/A<br>
-						<% end %>
-					</p>
-				</div>
-			</div>
-
-			<div class="medium-6 small-12 columns margin-bottom-50px">
-				<div class="panel" data-equalizer-watch>
+	<div class="row" data-equalizer>
+		<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns">
+			<div class="info-box box-border-red" data-equalizer-watch>
+				<div class="row">
 					<% unless @protest.organisation.empty? %>
 					<div class="row">
 						<div class="small-12 columns">
@@ -76,75 +37,49 @@
 					<div class="row">
 						<div class="small-3 columns text-center">
 							<% unless @protest.twitter == "@" %>
-								<%= link_to raw('<i class="fi-social-twitter"></i>'), "http://www.twitter.com/#{@protest.twitter[1..-1]}", target: "_blank" %></i>
+							<%= link_to raw('<i class="fi-social-twitter s-m-i"></i>'), "http://www.twitter.com/#{@protest.twitter[1..-1]}", target: "_blank" %></i>
 							<% else %>
-								<i class="fi-social-twitter disabled-icon"></i>
+							<i class="fi-social-twitter s-m-i disabled-icon"></i>
 							<% end %>
 						</div>
-						<div class="small-3 columns text-center"><i class="fi-social-facebook"></i></div>
-						<div class="small-3 columns text-center"><i class="fi-link"></i></div>
-						<div class="small-3 columns text-center"><i class="fi-mail"></i></div>
+						<div class="small-3 columns text-center"><i class="fi-social-facebook s-m-i"></i></div>
+						<div class="small-3 columns text-center"><i class="fi-link s-m-i"></i></div>
+						<div class="small-3 columns text-center"><i class="fi-mail s-m-i"></i></div>
 					</div><!-- row -->
 				</div>
 			</div>
+
 		</div>
-
-
-		<!-- <div class="row">
-
-			<div class="large-6 columns">
-				<div class="box">
-					<p><span class="highlight red-text">Organisers</span> <% unless @protest.organisation.empty? %>
-						<%= @protest.organisation %><br>
-					<% else %>
-						N/A<br>
-					<% end %>
-				</p>
-				<p><span class="highlight red-text">E-mail</span> <% unless @protest.email.empty? %>
-					<%= mail_to @protest.email, @protest.email, subject: @protest.title %><br>
-					<% else %>
-						N/A<br>
-					<% end %>
-				</p>
-				<p><span class="highlight red-text">Website</span> <% unless @protest.website.empty? %>
-					<%= link_to @protest.website, @protest.website, target: "_blank" %><br>
-					<% else %>
-						N/A<br>
-					<% end %>
-				</p>
-				<p><span class="highlight red-text">Twitter</span><% unless @protest.twitter == "@" %>
-						<%= link_to @protest.twitter, "http://www.twitter.com/#{@protest.twitter[1..-1]}", target: "_blank" %><br>
-					<% else %>
-					N/A
-					<% end %>
-				</p>
-				<p><span class="highlight red-text">Facebook</span> <% unless @protest.facebook.empty? %>
-					<%= link_to @protest.facebook, @protest.facebook, target: "_blank" %><br>
-					<% else %>
-						N/A<br>
-					<% end %>
-				</p>
-				</div>
+		<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns">
+			<div class="info-box box-border-green" data-equalizer-watch>
+				<%= @protest.description %>
 			</div>
-			<div class="large-6 columns">
-				<div class="box">
-					<p><span class="highlight red-text">More info</span> <% unless @protest.more_info.empty? %>
-						<%= @protest.more_info %><br>
-						<% else %>
-							N/A<br>
-						<% end %>
-					</p>
-				</div>
+		</div>
+		<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns">
+			<div class="info-box box-border-blue" data-equalizer-watch>
+				<h3 class="info-header">Starting location</h3> <%= @protest.starting_location %>
 			</div>
-			<div class="large-6 columns">
-				<div class="box">
-					<p><span class="highlight red-text">March route</span> <% unless @protest.march_route.empty? %>
-						<%= @protest.march_route %><br>
-						<% else %>
-							N/A<br>
-						<% end %>
-					</p>
-				</div>
-			</div> -->
-		</div><!-- row -->
+		</div>
+		<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns">
+			<div class="info-box box-border-yellow" data-equalizer-watch>
+				<h3 class="info-header">March route</h3> <%= @protest.march_route %>
+			</div>
+		</div>
+	</div><!-- row -->
+
+	<div class="row">
+		<div class="medium-4 small-11 small-centered columns margin-bottom-50px end">
+			<div class="info-box box-border-purple">
+				<h3 class="info-header">More info</h3>
+				<% unless @protest.more_info.empty? %>
+					<%= @protest.more_info %><br>
+				<% else %>
+					N/A<br>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+
+
 </div><!-- row main_content -->
