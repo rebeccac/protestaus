@@ -21,64 +21,137 @@
 		<div class="large-5 medium-12 small-12 columns"><%= render 'common/share' %></div>
 	</div><!-- row -->
 
+	<div class="width-98-percent">
+		<div class="row">
+					<div class="large-6 medium-8 small-11 small-centered columns">
+						<div class="info-box-s-m-i box-border-green">
+							<div class="row">
+								<div class="small-12 columns">
+									<% unless @protest.organisation.empty? %>
+									<div class="row">
+										<div class="small-12 columns">
+											<h3 class="info-header"><%= @protest.organisation %></h3>
+										</div>
+									</div><!-- row -->
+									<% end %>
+									<div class="row">
+										<div class="small-3 columns text-center">
+											<% unless @protest.twitter == "@" %>
+											<%= link_to raw('<i class="fi-social-twitter s-m-i"></i>'), "http://www.twitter.com/#{@protest.twitter[1..-1]}", target: "_blank" %></i>
+											<% else %>
+											<i class="fi-social-twitter s-m-i disabled-icon"></i>
+											<% end %>
+										</div>
+										<div class="small-3 columns text-center">
+											<% unless @protest.facebook.empty? %>
+												<%= link_to raw('<i class="fi-social-facebook s-m-i"></i>'), @protest.facebook, target: "_blank" %>
+											<% else %>
+												<i class="fi-social-facebook s-m-i disabled-icon"></i>
+											<% end %>
+										</div>
+										<div class="small-3 columns text-center">
+											<% unless @protest.website.empty? %>
+											<%= link_to raw('<i class="fi-link s-m-i"></i>'), @protest.website, target: "_blank" %>
+											<% else %>
+											<i class="fi-link s-m-i disabled-icon"></i>
+											<% end %>
+										</div>
+										<div class="small-3 columns text-center">
+											<% unless @protest.email.empty? %>
+											<%= mail_to @protest.email, raw('<i class="fi-mail s-m-i"></i>'), subject: @protest.title %>
+											<% else %>
+											<i class="fi-mail s-m-i disabled-icon"></i>
+											<% end %>
+										</div>
+									</div><!-- row -->
+								</div><!-- small-12 columns -->
+							</div>
+						<!-- </div> -->
+
+					</div>
+		</div>
 
 
-	<div class="row" data-equalizer>
-		<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns">
-			<div class="info-box box-border-red" data-equalizer-watch>
+		<div class="row">
+			<div class="medium-6 medium-uncentered small-11 small-centered columns">
 				<div class="row">
-					<% unless @protest.organisation.empty? %>
-					<div class="row">
-						<div class="small-12 columns">
-							<%= @protest.organisation %>
+					<div class="medium-11 medium-uncentered small-11 small-centered columns">
+						<div class="info-box-short box-border-red">
+
+							<%= @protest.description %>
 						</div>
-					</div><!-- row -->
-					<% end %>
-					<div class="row">
-						<div class="small-3 columns text-center">
-							<% unless @protest.twitter == "@" %>
-							<%= link_to raw('<i class="fi-social-twitter s-m-i"></i>'), "http://www.twitter.com/#{@protest.twitter[1..-1]}", target: "_blank" %></i>
+					</div>
+				</div>
+				<div class="row">
+					<div class="medium-11 medium-uncentered small-11 small-centered columns">
+						<div class="info-box-short box-border-red">
+
+							<h3 class="info-header">Starting location</h3> <%= @protest.starting_location %>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="medium-11 medium-uncentered small-11 small-centered columns">
+						<div class="info-box-short box-border-red">
+
+							<h3 class="info-header">March route</h3> <%= @protest.march_route %>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="medium-6 medium-uncentered small-11 small-centered columns">
+				<div class="row">
+					<div class="medium-11 medium-uncentered small-11 small-centered columns">
+						<div class="box-border-red height-490">
+
+							<h3 class="info-header">More info</h3>
+							<% unless @protest.more_info.empty? %>
+							<%= @protest.more_info %><br>
 							<% else %>
-							<i class="fi-social-twitter s-m-i disabled-icon"></i>
+							N/A<br>
 							<% end %>
 						</div>
-						<div class="small-3 columns text-center"><i class="fi-social-facebook s-m-i"></i></div>
-						<div class="small-3 columns text-center"><i class="fi-link s-m-i"></i></div>
-						<div class="small-3 columns text-center"><i class="fi-mail s-m-i"></i></div>
-					</div><!-- row -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="row" data-equalizer>
+
+			<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns blue-background">
+				<div class="info-box box-border-red" data-equalizer-watch>
+
+					<%= @protest.description %>
+				</div>
+			</div>
+			<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns blue-background">
+				<div class="info-box box-border-red" data-equalizer-watch>
+
+					<h3 class="info-header">Starting location</h3> <%= @protest.starting_location %>
+				</div>
+			</div>
+			<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns blue-background">
+				<div class="info-box box-border-red" data-equalizer-watch>
+
+					<h3 class="info-header">March route</h3> <%= @protest.march_route %>
+				</div>
+			</div>
+
+			<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns end margin-bottom-50px blue-background">
+				<div class="info-box box-border-red" data-equalizer-watch>
+
+					<h3 class="info-header">More info</h3>
+					<% unless @protest.more_info.empty? %>
+						<%= @protest.more_info %><br>
+					<% else %>
+						N/A<br>
+					<% end %>
 				</div>
 			</div>
 
 		</div>
-		<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns">
-			<div class="info-box box-border-green" data-equalizer-watch>
-				<%= @protest.description %>
-			</div>
-		</div>
-		<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns">
-			<div class="info-box box-border-blue" data-equalizer-watch>
-				<h3 class="info-header">Starting location</h3> <%= @protest.starting_location %>
-			</div>
-		</div>
-		<div class="large-3 medium-6 medium-uncentered small-11 small-centered columns">
-			<div class="info-box box-border-yellow" data-equalizer-watch>
-				<h3 class="info-header">March route</h3> <%= @protest.march_route %>
-			</div>
-		</div>
-	</div><!-- row -->
-
-	<div class="row">
-		<div class="large-4 medium-8 small-11 small-centered columns margin-bottom-50px end">
-			<div class="info-box box-border-purple">
-				<h3 class="info-header">More info</h3>
-				<% unless @protest.more_info.empty? %>
-					<%= @protest.more_info %><br>
-				<% else %>
-					N/A<br>
-				<% end %>
-			</div>
-		</div>
-	</div>
+	</div><!-- width-98-percent -->
 
 
 

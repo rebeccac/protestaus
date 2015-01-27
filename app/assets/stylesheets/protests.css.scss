@@ -61,7 +61,7 @@ ul#protest_list {
 }
 
 .disabled-icon {
-   color: $med_grey;
+   color: $pale_grey;
 }
 
 .margin-bottom-50px {
@@ -92,13 +92,38 @@ ul#protest_list {
    }
 }
 
-.info-box {
+
+.width-98-percent {
+   width: 98%;
+   margin: 0 auto;
+}
+
+.info-box,
+.info-box-short,
+.height-490,
+.info-box-s-m-i {
    background-color: #f8f8f8;
    border: 1px solid #d1d1d1;
-   padding: 3px;
+   padding: 20px 4px;
    border-radius: 5px;
-   box-shadow: 5px 5px 5px #d1d1d1;
+   box-shadow: 3px 3px 3px #d1d1d1;
    margin-bottom: 15px;
+}
+.info-box {
+   min-width: 250px;
+   min-height: 100px;
+   max-height: 250px;
+   overflow: scroll;
+}
+.info-box-short {
+   height: 150px;
+   overflow: scroll;
+}
+.height-490 {
+   height: 481px !important;
+}
+.info-box-s-m-i {
+   height: auto;
 }
 .box-border-green {
       border-left: 15px solid #7abb77;
